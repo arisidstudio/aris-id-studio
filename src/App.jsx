@@ -527,7 +527,7 @@ const Footer = ({ setCurrentPage }) => (
             <Instagram size={18} />
           </a>
           <a 
-            href="www.linkedin.com/in/lutécia-rustico-011064213" 
+            href="https://www.linkedin.com/in/lut%C3%A9cia-rustico-011064213/" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-purple-600 transition-colors"
