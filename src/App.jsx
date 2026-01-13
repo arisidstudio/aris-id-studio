@@ -1043,7 +1043,7 @@ const HomePage = ({ setCurrentPage, onOpenProject }) => (
           <RevealOnScroll>
             <div className="relative group">
               <div className="absolute inset-0 bg-purple-600/20 blur-[60px] rounded-full group-hover:bg-purple-600/30 transition-all duration-500"></div>
-              <img src="/photo-profil.jpg" alt="Lutécia Rustico" className="relative w-full max-w-md mx-auto object-cover rounded-2xl border border-white/10 shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500 grayscale hover:grayscale-0" />
+              <img src="/photo-profil-lutecia.png" alt="Lutécia Rustico" className="relative w-full max-w-md mx-auto object-cover rounded-2xl border border-white/10 shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500 grayscale hover:grayscale-0" />
             </div>
           </RevealOnScroll>
           <RevealOnScroll delay={200}>
