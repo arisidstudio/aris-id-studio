@@ -518,10 +518,31 @@ const Footer = ({ setCurrentPage }) => (
           Je façonne des identités visuelles avec intention et précision. Pas de superflu, juste l'essentiel pour révéler votre histoire unique et pérenne.
         </p>
         <div className="flex space-x-4">
-          <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-purple-600 transition-colors"><Instagram size={18} /></a>
-          <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-purple-600 transition-colors"><Linkedin size={18} /></a>
-          <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-purple-600 transition-colors"><Facebook size={18} /></a>
-        </div>
+          <a 
+            href="https://www.instagram.com/arisid_studio?igsh=ZTN6Mmllc3VkYXNq&utm_source=qr" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-purple-600 transition-colors"
+          >
+            <Instagram size={18} />
+          </a>
+          <a 
+            href="www.linkedin.com/in/lutécia-rustico-011064213" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-purple-600 transition-colors"
+          >
+            <Linkedin size={18} />
+          </a>
+          <a 
+            href="https://www.facebook.com/share/1AoGoDNwTp/?mibextid=wwXIfr" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-purple-600 transition-colors"
+          >
+            <Facebook size={18} />
+          </a>
+          </div>
       </div>
       
       <div>
