@@ -455,9 +455,7 @@ const Navigation = ({ currentPage, setCurrentPage, onLogoClick }) => {
             }
           `}} />
           <div className="animate-[cinematic-reveal_1.5s_ease-out_forwards]">
-            <h1 className="text-2xl font-bold tracking-tighter text-white">
-              ARIS<span className="text-purple-500">.</span>ID
-            </h1>
+            <img src="/LOGO ARISID STUDIO 1.png" alt="Logo Agence" className="h-14 w-auto object-contain" />
           </div>
         </div>
 
