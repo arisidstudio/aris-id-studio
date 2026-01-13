@@ -511,7 +511,7 @@ const Footer = ({ setCurrentPage }) => (
           }}
           className="cursor-pointer group inline-block mb-6"
         >
-          <img src="/LOGO ARISID STUDIO Blanc;PNG" alt="Logo Agence" className="h-24 w-auto object-contain" />
+          <img src="/LOGO ARISID STUDIO Blanc.png" alt="Logo Agence" className="h-24 w-auto object-contain" />
         </div>
 
         <p className="text-neutral-400 max-w-sm mb-6 leading-relaxed text-sm">
