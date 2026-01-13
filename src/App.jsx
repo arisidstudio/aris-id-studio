@@ -455,7 +455,7 @@ const Navigation = ({ currentPage, setCurrentPage, onLogoClick }) => {
             }
           `}} />
           <div className="animate-[cinematic-reveal_1.5s_ease-out_forwards]">
-            <img src="/LOGO ARISID STUDIO BLANC.png" alt="Logo Agence" className="h-16 md:h-24 w-auto object-contain" />
+            <img src="/LOGO ARISID STUDIO Blanc.png" alt="Logo Agence" className="h-16 md:h-24 w-auto object-contain" />
           </div>
         </div>
 
@@ -511,7 +511,7 @@ const Footer = ({ setCurrentPage }) => (
           }}
           className="cursor-pointer group inline-block mb-6"
         >
-          <img src="/LOGO ARISID STUDIO BLANC;PNG" alt="Logo Agence" className="h-24 w-auto object-contain" />
+          <img src="/LOGO ARISID STUDIO Blanc;PNG" alt="Logo Agence" className="h-24 w-auto object-contain" />
         </div>
 
         <p className="text-neutral-400 max-w-sm mb-6 leading-relaxed text-sm">
