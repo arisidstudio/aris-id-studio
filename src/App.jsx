@@ -570,9 +570,9 @@ const Footer = ({ setCurrentPage }) => (
       <div>
         <h3 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Contact</h3>
         <ul className="space-y-4 text-neutral-400 text-sm">
-          <li><a href="mailto:rusticolutecia2@gmail.com" className="hover:text-purple-400 transition-colors">rusticolutecia2@gmail.com</a></li>
+          <li><a href="mailto:helloarisidstudio@gmail.com" className="hover:text-purple-400 transition-colors">helloarisidstudio@gmail.com</a></li>
           <li><a href="tel:+33614132971" className="hover:text-purple-400 transition-colors">+33 6 14 13 29 71</a></li>
-          <li>Nice, France</li>
+          <li>France</li>
         </ul>
       </div>
     </div>
@@ -580,8 +580,8 @@ const Footer = ({ setCurrentPage }) => (
     <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-neutral-500 text-xs">
       <p>&copy; {new Date().getFullYear()} ARIS ID STUDIO. Tous droits réservés.</p>
       <div className="flex space-x-6 mt-4 md:mt-0">
-        <button onClick={() => setCurrentPage('legal')} className="hover:text-white transition-colors">Mentions Légales</button>
-        <button onClick={() => setCurrentPage('legal')} className="hover:text-white transition-colors">CGV</button>
+        <button onClick={() => { setCurrentPage('legal'); window.scrollTo(0,0); }} className="hover:text-white transition-colors">Mentions Légales</button>
+        <button onClick={() => { setCurrentPage('legal'); window.scrollTo(0,0); }} className="hover:text-white transition-colors">CGV</button>
       </div>
     </div>
   </footer>
