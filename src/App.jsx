@@ -1043,8 +1043,7 @@ const HomePage = ({ setCurrentPage, onOpenProject }) => (
           <RevealOnScroll>
             <div className="relative group">
               <div className="absolute inset-0 bg-purple-600/20 blur-[60px] rounded-full group-hover:bg-purple-600/30 transition-all duration-500"></div>
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop" alt="Lutécia Rustico" className="relative w-full max-w-md mx-auto object-cover rounded-2xl border border-white/10 shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500 grayscale hover:grayscale-0" />
-            </div>
+              <img src="/photo-profil-lutecia.png" alt="Lutécia Rustico" className="relative w-full max-w-md mx-auto object-cover rounded-2xl border border-white/10 shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500 grayscale hover:grayscale-0" />
           </RevealOnScroll>
           <RevealOnScroll delay={200}>
             <div>
@@ -1052,8 +1051,8 @@ const HomePage = ({ setCurrentPage, onOpenProject }) => (
               <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tighter mb-6">LUTÉCIA <br />RUSTICO.</h2>
               <div className="space-y-6 text-neutral-300 text-lg leading-relaxed font-light">
                 <p>Bienvenue chez <span className="text-white font-medium">ARIS ID STUDIO</span>.</p>
-                <p>Je suis Lutécia, la force créative derrière chaque projet. Ma vision dépasse la simple esthétique.</p>
-                <p>Ensemble, transformons votre vision en une empreinte visuelle inoubliable.</p>
+                <p>Je suis Lutécia, la force créative derrière chaque projet. Ma vision dépasse la simple esthétique : je cherche l'âme de votre marque pour la révéler au monde.</p>
+                <p>Aujoud'hui, seules les histoires authentiques captent l'attention. Mon rôle est de sculpter la vôtre avec une précision stratégique et une élégance intemporelle. Ensemble, transformons votre vision en une empreinte visuelle inoubliable.</p>
               </div>
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                  <Button variant="outline" onClick={() => setCurrentPage('about')}>Découvrir ma vision <ArrowRight size={20} /></Button>
