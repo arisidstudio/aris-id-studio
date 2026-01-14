@@ -1177,7 +1177,7 @@ const HomePage = ({ setCurrentPage, onOpenProject }) => (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
             <RevealOnScroll><div className="p-6"><span className="block text-5xl md:text-7xl font-bold text-white mb-2 tracking-tighter"><AnimatedCounter end="+4" duration={1500} /></span><span className="text-purple-400 text-sm font-bold tracking-[0.2em] uppercase">Années d'expertise</span></div></RevealOnScroll>
             <RevealOnScroll delay={100}><div className="p-6"><span className="block text-5xl md:text-7xl font-bold text-white mb-2 tracking-tighter"><AnimatedCounter end="+50" duration={2000} /></span><span className="text-purple-400 text-sm font-bold tracking-[0.2em] uppercase">Projets complétés</span></div></RevealOnScroll>
-            <RevealOnScroll delay={200}><div className="p-6"><span className="block text-5xl md:text-7xl font-bold text-white mb-2 tracking-tighter"><AnimatedCounter end="80%" duration={2000} /></span><span className="text-purple-400 text-sm font-bold tracking-[0.2em] uppercase">Clients satisfaits</span></div></RevealOnScroll>
+            <RevealOnScroll delay={200}><div className="p-6"><span className="block text-5xl md:text-7xl font-bold text-white mb-2 tracking-tighter"><AnimatedCounter end={80} suffix="%" duration={2000} /></span><span className="text-purple-400 text-sm font-bold tracking-[0.2em] uppercase">Clients satisfaits</span></div></RevealOnScroll>
         </div>
       </div>
     </section>
@@ -1282,7 +1282,7 @@ const App = () => {
         <div className="absolute bottom-[-20%] left-[20%] w-[50%] h-[50%] rounded-full bg-blue-600/30 blur-[100px] animate-[blob-pulse_15s_infinite_ease-in-out] mix-blend-screen"></div>
       </div>
 
-      <Navigation currentPage={currentPage} setCurrentPage={(p) => { setSelectedProject(null); setCurrentPage(p); }} onLogoClick={() => setCurrentPage('home')} />
+      <Navigation currentPage={currentPage} setCurrentPage={(p) => { setSelectedProject(null); setCurrentPage(p); }} onLogoClick={() => setCurrentPage('about')} />
       <main className="relative z-10 min-h-screen">{renderPage()}</main>
       <Footer setCurrentPage={(p) => { setSelectedProject(null); setCurrentPage(p); }} />
     </div>
