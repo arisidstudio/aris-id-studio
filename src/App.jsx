@@ -723,8 +723,11 @@ const ProjectDetailPage = ({ project, onBack, onContactClick }) => {
                     onClick={() => setSelectedMedia(null)}
                 >
                     <button 
-                        className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors p-2"
-                        onClick={() => setSelectedMedia(null)}
+                        className="absolute top-6 right-6 text-white hover:text-purple-500 transition-colors p-2 bg-black/50 rounded-full border border-white/20 z-50 backdrop-blur-md"
+                        onClick={(e) => {
+                            e.stopPropagation(); // Empêche les conflits de clic
+                            setSelectedMedia(null);
+                        }}
                     >
                         <X size={32} />
                     </button>
