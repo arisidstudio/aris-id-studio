@@ -379,7 +379,7 @@ const PROJECTS = [
     role: "Direction Artistique & product design",
     description: "Ce projet est un shooting produit imaginé autour d’une montre connectée, pensé comme un objet de design et non comme un simple produit technologique. L’objectif est de sublimer l’objet à travers des mises en scène élégantes et immersives, en jouant avec la lumière, les textures et les matières. Le travail repose sur une approche visuelle premium, mêlant minimalisme, inspirations naturelles et ambiance luxueuse. Chaque image met en valeur les lignes, les finitions et l’identité du produit, tout en créant une atmosphère forte et émotionnelle. Ce projet illustre ma capacité à concevoir des shootings produits cohérents, à construire une narration visuelle autour d’un objet et à produire des visuels adaptés aux supports digitaux et publicitaires.",
     content: [
-      { type: 'image', url: 'Montre-1.jpg' }
+      { type: 'image', url: 'Montre-1.jpg' },
       { type: 'image', url: 'Montre-2.jpg' },
       { type: 'image', url: 'Montre-3.jpg' },
       { type: 'image', url: 'Montre-pres-1.jpg' },
