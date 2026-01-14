@@ -30,7 +30,7 @@ const RevealOnScroll = ({ children, delay = 0 }) => {
     <div
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}
-      className={`transition-all duration-1000 ease-out transform ${
+      className={`transition-all duration-500 ease-out transform ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
       }`}
     >
@@ -790,7 +790,7 @@ const [selectedMedia, setSelectedMedia] = useState(null);
                                     {item.type === 'video' ? (
                                         <video src={item.url} controls className="w-full h-full object-cover" poster={item.thumbnail || ''}>Votre navigateur ne supporte pas la balise vidéo.</video>
                                     ) : (
-                                        <img src={item.url} alt={`${project.title} detail ${index + 1}`} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
+                                        <img src={item.url} alt={`${project.title} detail ${index + 1}`} loading="lazy" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
                                     )}
                                 </div>
                             ))}
@@ -819,7 +819,7 @@ const PortfolioPage = ({ onOpenProject }) => (
             <div className="group cursor-pointer" onClick={() => onOpenProject(project)}>
               <div className="relative overflow-hidden rounded-sm mb-6 aspect-video md:aspect-[4/3] shadow-2xl">
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-500 z-10"></div>
-                <img src={project.image} alt={project.title} className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700 ease-out" />
+                <img src={project.image} alt={project.title} loading="lazy" className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700 ease-out" />
                 <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md px-3 py-1 text-xs text-white uppercase tracking-wider z-20 rounded-sm border border-white/10">{project.year}</div>
               </div>
               <div className="flex justify-between items-start">
