@@ -299,7 +299,7 @@ const PROJECTS = [
     image: "/CR-Façade Rooftop.png",
     year: "2025",
     role: "Direction artistique & Brand designer",
-    description: "CELESTE Riviera est un projet d’identité visuelle imaginé pour un concept de soirée immersive, élégante et hors du temps. Inspiré par le ciel, les constellations et la nuit comme espace de projection émotionnelle, l’univers graphique plonge le public dans une expérience sensorielle où le luxe rencontre le rêve. L’objectif de ce projet est de créer une identité forte, reconnaissable et cohérente, capable d’exister sur l’ensemble des supports de communication d’un événement : affiches, invitations, save the date, réseaux sociaux, scénographie visuelle, photocall et supports digitaux. Chaque visuel est pensé comme une porte d’entrée vers l’expérience CELESTE, entre mystère, raffinement et magie nocturne. Le défi principal réside dans la création d’un univers à la fois premium et immersif, sans tomber dans les codes classiques de l’événementiel. Le travail sur les typographies élégantes, les palettes profondes, les jeux de lumière et les références célestes permet de construire une narration visuelle cohérente, pensée pour séduire, intriguer et marquer les esprits. Ce projet m’a permis d’explorer une direction artistique plus sensible et expérientielle, de travailler la notion d’émotion à travers le design, et de concevoir un univers capable de vivre autant dans l’espace physique que sur les supports numériques. CELESTE Riviera n’est pas seulement une soirée, c’est une atmosphère, un moment suspendu, une promesse de souvenirs.",
+    description: "CELESTE Riviera est un projet d’identité visuelle conçu pour une soirée immersive et élégante, inspirée par l’univers céleste et la magie de la nuit. L’objectif est de créer un univers graphique fort, reconnaissable et cohérent, capable de transporter le public dans une expérience à la fois raffinée et émotionnelle. Le projet se décline sur l’ensemble des supports de communication de l’événement : affiches, invitations, save the date, réseaux sociaux et supports scénographiques. Le travail graphique repose sur des palettes profondes, des typographies élégantes et des références aux constellations, afin de construire une atmosphère nocturne, mystérieuse et premium. CELESTE Riviera est pensé comme un moment suspendu, où le design devient un vecteur d’émotion et d’immersion, au service d’une expérience mémorable.",
     content: [
       { type: 'image', url: 'Flyer-1-Célestre-Riviera.jpg' },
       { type: 'image', url: 'Flyer-Opening-Post.jpg' },
@@ -711,9 +711,39 @@ const ClientLogosSection = () => (
 const ProjectDetailPage = ({ project, onBack, onContactClick }) => {
     if (!project) return null;
     useEffect(() => { window.scrollTo(0, 0); }, [project]);
-
+const [selectedMedia, setSelectedMedia] = useState(null);
     return (
         <section className="pt-32 pb-20 min-h-screen relative z-10 bg-black/30 backdrop-blur-md">
+          {selectedMedia && (
+                <div 
+                    className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 animate-in fade-in duration-300"
+                    onClick={() => setSelectedMedia(null)}
+                >
+                    <button 
+                        className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors p-2"
+                        onClick={() => setSelectedMedia(null)}
+                    >
+                        <X size={32} />
+                    </button>
+                    
+                    <div className="max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center" onClick={e => e.stopPropagation()}>
+                        {selectedMedia.type === 'video' ? (
+                            <video 
+                                src={selectedMedia.url} 
+                                controls 
+                                autoPlay 
+                                className="max-w-full max-h-full object-contain rounded-sm shadow-2xl"
+                            />
+                        ) : (
+                            <img 
+                                src={selectedMedia.url} 
+                                alt="Aperçu grand format" 
+                                className="max-w-full max-h-full object-contain rounded-sm shadow-2xl" 
+                            />
+                        )}
+                    </div>
+                </div>
+            )}
             <div className="max-w-7xl mx-auto px-6">
                 <div className="mb-8">
                     <button onClick={onBack} className="flex items-center text-neutral-400 hover:text-white transition-colors group">
