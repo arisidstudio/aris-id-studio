@@ -580,8 +580,7 @@ const Footer = ({ setCurrentPage }) => (
     <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-neutral-500 text-xs">
       <p>&copy; {new Date().getFullYear()} ARIS ID STUDIO. Tous droits réservés.</p>
       <div className="flex space-x-6 mt-4 md:mt-0">
-        <button onClick={() => { setCurrentPage('legal'); window.scrollTo(0,0); }} className="hover:text-white transition-colors">Mentions Légales</button>
-        <button onClick={() => { setCurrentPage('legal'); window.scrollTo(0,0); }} className="hover:text-white transition-colors">CGV</button>
+        <button onClick={() => { setCurrentPage('legal'); window.scrollTo(0,0); }} className="hover:text-white transition-colors">Mentions Légales & CGV</button>
       </div>
     </div>
   </footer>
@@ -892,7 +891,7 @@ const OffersPage = () => (
                   <div className="text-4xl font-bold text-white mb-8">{offer.price}</div>
                   <ul className="space-y-4 mb-8">{offer.features.map((feat, idx) => (<li key={idx} className="flex items-start text-neutral-300 text-sm"><Check className="text-purple-500 mr-3 shrink-0" size={18} />{feat}</li>))}</ul>
                 </div>
-                <a href={`mailto:rusticolutecia2@gmail.com?subject=Offre ${offer.title}`} className="w-full block text-center bg-white/10 border border-white/20 text-white py-3 rounded-full hover:bg-purple-600 hover:border-purple-600 transition-all text-sm font-bold uppercase tracking-wider">Choisir cette offre</a>
+                <a href={`mailto:helloarisidstudio@gmail.com?subject=Offre ${offer.title}`} className="w-full block text-center bg-white/10 border border-white/20 text-white py-3 rounded-full hover:bg-purple-600 hover:border-purple-600 transition-all text-sm font-bold uppercase tracking-wider">Choisir cette offre</a>
               </div>
             ))}
           </div>
@@ -910,7 +909,7 @@ const OffersPage = () => (
                   <div className="text-4xl font-bold text-white mb-8">{offer.price}</div>
                   <ul className="space-y-4 mb-8">{offer.features.map((feat, idx) => (<li key={idx} className="flex items-start text-neutral-300 text-sm"><Check className="text-purple-500 mr-3 shrink-0" size={18} />{feat}</li>))}</ul>
                 </div>
-                <a href={`mailto:rusticolutecia2@gmail.com?subject=Offre ${offer.title}`} className="w-full block text-center bg-white/10 border border-white/20 text-white py-3 rounded-full hover:bg-purple-600 hover:border-purple-600 transition-all text-sm font-bold uppercase tracking-wider">Choisir cette offre</a>
+                <a href={`mailto:helloarisidstudio@gmail.com?subject=Offre ${offer.title}`} className="w-full block text-center bg-white/10 border border-white/20 text-white py-3 rounded-full hover:bg-purple-600 hover:border-purple-600 transition-all text-sm font-bold uppercase tracking-wider">Choisir cette offre</a>
               </div>
             ))}
           </div>
@@ -928,7 +927,7 @@ const ContactPage = () => {
         const finalProjectType = formData.type === 'Autre' ? formData.customType : formData.type;
         const subject = `Nouvelle demande de projet : ${finalProjectType}`;
         const body = `Nom: ${formData.name}\nEntreprise: ${formData.company}\nEmail: ${formData.email}\nTéléphone: ${formData.phone}\nBudget: ${formData.budget}\nDélai: ${formData.deadline}\n\nMessage:\n${formData.message}`;
-        window.location.href = `mailto:rusticolutecia2@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = `mailto:helloarisidstudio@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     };
 
     return (
