@@ -717,15 +717,16 @@ const [selectedMedia, setSelectedMedia] = useState(null);
           {selectedMedia && (
                 <div 
                     className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 animate-in fade-in duration-300"
-                    onClick={() => setSelectedMedia(null)}
+                    onClick={() => setSelectedMedia(null)} // Ferme en cliquant à côté
                 >
                     <button 
                         className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors p-2"
-                        onClick={() => setSelectedMedia(null)}
+                        onClick={() => setSelectedMedia(null)} // Ferme avec le bouton X
                     >
                         <X size={32} />
                     </button>
                     
+                    {/* Contenu en grand */}
                     <div className="max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center" onClick={e => e.stopPropagation()}>
                         {selectedMedia.type === 'video' ? (
                             <video 
