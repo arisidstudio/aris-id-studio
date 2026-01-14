@@ -280,7 +280,7 @@ const PROJECTS = [
     id: 2,
     title: "Football cover",
     category: "Design Sportif",
-    image: "/Foot-design-1",
+    image: "/Foot-design-1.jpg",
     year: "2025",
     role: "Design d’affiches sportives",
     description: "Ce projet explore le football comme un terrain d’expression visuelle et émotionnelle, au-delà du simple résultat sportif. Chaque visuel est pensé comme une affiche iconique, mettant en scène des joueurs majeurs du football contemporain à travers une direction artistique forte, immersive et assumée. L’objectif est de transformer le joueur en symbole : une figure de puissance, de jeunesse, de tension et d’explosivité. Les compositions jouent avec la couleur, la typographie, la superposition d’images et les textures graphiques pour créer des visuels percutants, immédiatement identifiables et conçus pour capter l’attention sur tous les supports digitaux et print. Le défi de ce projet réside dans l’équilibre entre performance sportive et narration visuelle. Chaque affiche raconte un moment, une attitude ou une énergie propre au joueur représenté, tout en respectant l’identité du club et l’univers du football moderne. Ce travail m’a permis d’affirmer un langage graphique orienté sport, d’expérimenter des compositions audacieuses et de concevoir des visuels pensés comme des objets de communication à forte valeur émotionnelle.",
