@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { 
   Menu, X, ArrowRight, Instagram, Linkedin, Facebook, 
   ChevronDown, Check, ArrowLeft, Diamond, Zap, Eye, 
-  Star, Briefcase, GraduationCap, ChevronLeft, ChevronRight 
+  Star, Briefcase, GraduationCap, ChevronLeft, ChevronRight, Maximize2 
 } from 'lucide-react';
 
 /* --- 1. HOOKS & UTILS --- */
@@ -778,8 +778,6 @@ const [selectedMedia, setSelectedMedia] = useState(null);
                             <p className="text-neutral-300 mb-8">{project.role}</p>
                             <h4 className="text-white font-bold uppercase tracking-wider text-sm mb-4 border-b border-white/10 pb-2">Client</h4>
                             <p className="text-neutral-300 mb-8">{project.title} Company</p>
-                            <h4 className="text-white font-bold uppercase tracking-wider text-sm mb-4 border-b border-white/10 pb-2">Livrables</h4>
-                            <ul className="text-neutral-300 space-y-2 text-sm"><li>• Identité Visuelle</li><li>• Supports Digitaux</li><li>• Guidelines</li></ul>
                         </div>
                     </RevealOnScroll>
                 </div>
