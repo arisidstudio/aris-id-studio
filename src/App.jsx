@@ -251,16 +251,28 @@ const CLIENTS = ["CoinCoquin", "Mixandlight", "Tic&Tac", "Mlkids", "Thalaïna Co
 const PROJECTS = [
   {
     id: 1,
-    title: "NEBULA X",
-    category: "Branding / UI",
-    image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop",
-    year: "2024",
-    role: "Direction Artistique & UI Design",
-    description: "Nebula X est une startup tech spécialisée dans le cloud computing quantique. Le défi était de rendre visible l'invisible : traduire la complexité du calcul quantique en une identité visuelle épurée, futuriste mais accessible.",
+    title: "Spicy 20'",
+    category: "Branding / Direction Artistique",
+    image: "/SPICY 20's 1.jpg",
+    year: "2025",
+    role: "Direction Artistique",
+    description: "Spicy 20’s est le concept d’un podcast imaginé comme un miroir brut et authentique de la vingtaine. Entre journal intime, manifeste générationnel et safe space sans filtre, ce projet questionne l’identité, la liberté, les émotions intenses et les paradoxes d’une décennie qui façonne. L'objectif du projet est de créer une identité visuelle forte et distinctive pour un podcast qui parle vrai, qui bouscule et qui résonne avec les jeunes adultes. Le défi ici est de concevoir un univers visuel à la fois intime, audacieux et affirmé, capable de vivre sur tous les supports de communication d’un podcast (cover, réseaux, motion, print). Il m’a permis d’oser plus, de sortir des codes commerciaux, et de parler avec mes tripes. Chaque affiche est une émotion, un cri ou une réflexion habillée de formes et de mots",
     content: [
-      { type: 'image', url: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2000&auto=format&fit=crop' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop' }
+      { type: 'image', url: 'BG_AM SPICY 20’s 1.jpg' },
+      { type: 'image', url: 'BG_AM SPICY 20’s 2.jpg' },
+      { type: 'image', url: 'BG_AM SPICY 20’s 3.jpg' },
+      { type: 'image', url: 'Spicy Sticker Mockup 2.jpg' },
+      { type: 'image', url: 'Spicy Sticker Mockup.jpg' },
+      { type: 'image', url: 'Spicy20’s_Bottle_2.jpg' },
+      { type: 'image', url: 'Spicy20’s_Bottle.jpg' },
+      { type: 'image', url: 'Spicy20’s_Cup_2.jpg' },
+      { type: 'image', url: 'Spicy20’s_Cup.jpg' },
+      { type: 'image', url: 'Spicy20’s_Notebook_2.jpg' },
+      { type: 'image', url: 'Spicy20’s_Notebook.jpg' },
+      { type: 'image', url: 'Spicy20’s_Tee-shirt_2.jpg' },
+      { type: 'image', url: 'Spicy20’s_Tee-shirt.jpg' },
+      { type: 'image', url: 'Spicy20’s_Tot Bag_2.jpg' },
+      { type: 'image', url: 'Spicy20’s_Tot Bag.jpg' }
     ]
   },
   {
