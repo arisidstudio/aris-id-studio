@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { 
   Menu, X, ArrowRight, Instagram, Linkedin, Facebook, 
   ChevronDown, Check, ArrowLeft, Diamond, Zap, Eye, 
@@ -707,47 +708,64 @@ const ClientLogosSection = () => (
 /* --- 5. COMPOSANTS DE PAGES (DÉFINIS AVANT LEUR UTILISATION) --- */
 
 const ProjectDetailPage = ({ project, onBack, onContactClick }) => {
-  const [selectedMedia, setSelectedMedia] = useState(null);
-  useEffect(() => { 
-        if (project) window.scrollTo(0, 0); 
-    }, [project]);
     if (!project) return null;
     useEffect(() => { window.scrollTo(0, 0); }, [project]);
+
+    const [selectedMedia, setSelectedMedia] = useState(null);
+
+    // NOUVEAU : Bloquer le défilement de la page quand l'image est ouverte
+    useEffect(() => {
+        if (selectedMedia) {
+            document.body.style.overflow = 'hidden'; // Bloque le scroll
+        } else {
+            document.body.style.overflow = 'unset'; // Réactive le scroll
+        }
+        return () => { document.body.style.overflow = 'unset'; }
+    }, [selectedMedia]);
+
+    // La fenêtre Lightbox "Téléportée" à la racine du site grâce au Portail
+    const lightbox = selectedMedia && createPortal(
+        <div 
+            className="fixed inset-0 z-[99999] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 animate-in fade-in duration-300"
+            onClick={() => setSelectedMedia(null)}
+            style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }} // Force la position fixe
+        >
+            {/* Bouton Fermer */}
+            <button 
+                className="absolute top-6 right-6 text-white hover:text-purple-500 transition-colors p-2 bg-black/50 rounded-full border border-white/20 z-50 cursor-pointer"
+                onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedMedia(null);
+                }}
+            >
+                <X size={32} />
+            </button>
+            
+            <div className="max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center" onClick={e => e.stopPropagation()}>
+                {selectedMedia.type === 'video' ? (
+                    <video 
+                        src={selectedMedia.url} 
+                        controls 
+                        autoPlay 
+                        className="max-w-full max-h-full object-contain rounded-sm shadow-2xl"
+                    />
+                ) : (
+                    <img 
+                        src={selectedMedia.url} 
+                        alt="Aperçu grand format" 
+                        className="max-w-full max-h-full object-contain rounded-sm shadow-2xl" 
+                    />
+                )}
+            </div>
+        </div>,
+        document.body // C'est ici qu'on dit "Mets ça directement dans le corps du site", pas dans la section
+    );
+
     return (
         <section className="pt-32 pb-20 min-h-screen relative z-10 bg-black/30 backdrop-blur-md">
-          {selectedMedia && (
-                <div 
-                    className="fixed inset-0 z-[9999] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 animate-in fade-in duration-300"
-                    onClick={() => setSelectedMedia(null)}
-                >
-                    <button 
-                        className="absolute top-6 right-6 text-white hover:text-purple-500 transition-colors p-2 bg-black/50 rounded-full border border-white/20 z-50 backdrop-blur-md"
-                        onClick={(e) => {
-                            e.stopPropagation(); // Empêche les conflits de clic
-                            setSelectedMedia(null);
-                        }}
-                    >
-                        <X size={32} />
-                    </button>
-                    
-                    <div className="max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center" onClick={e => e.stopPropagation()}>
-                        {selectedMedia.type === 'video' ? (
-                            <video 
-                                src={selectedMedia.url} 
-                                controls 
-                                autoPlay 
-                                className="max-w-full max-h-full object-contain rounded-sm shadow-2xl"
-                            />
-                        ) : (
-                            <img 
-                                src={selectedMedia.url} 
-                                alt="Aperçu grand format" 
-                                className="max-w-full max-h-full object-contain rounded-sm shadow-2xl" 
-                            />
-                        )}
-                    </div>
-                </div>
-            )}
+            {/* On affiche le portail ici */}
+            {lightbox}
+
             <div className="max-w-7xl mx-auto px-6">
                 <div className="mb-8">
                     <button onClick={onBack} className="flex items-center text-neutral-400 hover:text-white transition-colors group">
