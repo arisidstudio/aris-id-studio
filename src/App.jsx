@@ -348,28 +348,38 @@ const PROJECTS = [
   },
   {
     id: 5,
-    title: "MONOLITH",
-    category: "Art Print",
-    image: "https://images.unsplash.com/photo-1507643179173-617d654220a4?q=80&w=2000&auto=format&fit=crop",
-    year: "2024",
-    role: "Artiste 3D",
-    description: "Collection de posters en édition limitée explorant le brutalisme et les formes géométriques abstraites. Un travail sur la lumière, la matière (béton, verre) et la composition pour des intérieurs modernes.",
+    title: "Cherry Cherie",
+    category: "Identité visuel & App",
+    image: "/CC-logo.jpg",
+    year: "2025",
+    role: "Brand Designer",
+    description: "Cherry Chérie est une application pensée pour accompagner les femmes dans leur cycle menstruel avec douceur, fun et sororité. Ce projet mêle gamification, self-care et design émotionnel, au service d’une expérience bien-être libératrice, éducative et stylée. L'objectif du projet, c'est de créer une identité visuelle complète pour une appli bien-être dédiée au suivi du cycle menstruel, à la santé intime et à l’écoute de soi. L’enjeu , construire un univers rassurant mais moderne, frais sans être enfantin, et suffisamment modulable pour une appli mobile + une marque lifestyle forte. Il m’a permis d’explorer un branding au croisement de la tech féminine et du bien-être intime, avec une vraie attention portée à l’expérience émotionnelle des utilisatrices.",
     content: [
-      { type: 'image', url: 'https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=2000&auto=format&fit=crop' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1535498730771-e735b998cd64?q=80&w=2000&auto=format&fit=crop' }
+      { type: 'image', url: 'CC-pres-logo.jpg' },
+      { type: 'image', url: 'CC-pres-logo-2.jpg' },
+      { type: 'image', url: 'CC-couleurs.jpg' },
+      { type: 'image', url: 'CC-typos.jpg' },
+      { type: 'image', url: 'CC-icone.jpg' },
+      { type: 'image', url: 'CC-favicon.jpg' },
+      { type: 'image', url: 'CC-post-1.jpg' },
+      { type: 'image', url: 'CC-post-2.jpg' },
     ]
   },
   {
     id: 6,
-    title: "FLUX FINANCE",
-    category: "UI/UX Design",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop",
-    year: "2024",
-    role: "Lead Product Designer",
-    description: "Conception de l'application mobile pour une Fintech. L'enjeu principal était la simplification des parcours utilisateurs pour rendre l'investissement accessible aux néophytes, tout en inspirant une confiance absolue par un design rigoureux.",
+    title: "Shooting Produit",
+    category: "Shooting IA",
+    image: "/Montre-1.jpg",
+    year: "2025",
+    role: "Direction Artistique & product design",
+    description: "Ce projet est un shooting produit imaginé autour d’une montre connectée, pensé comme un objet de design et non comme un simple produit technologique. L’objectif est de sublimer l’objet à travers des mises en scène élégantes et immersives, en jouant avec la lumière, les textures et les matières. Le travail repose sur une approche visuelle premium, mêlant minimalisme, inspirations naturelles et ambiance luxueuse. Chaque image met en valeur les lignes, les finitions et l’identité du produit, tout en créant une atmosphère forte et émotionnelle. Ce projet illustre ma capacité à concevoir des shootings produits cohérents, à construire une narration visuelle autour d’un objet et à produire des visuels adaptés aux supports digitaux et publicitaires.",
     content: [
-      { type: 'image', url: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2000&auto=format&fit=crop' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2000&auto=format&fit=crop' }
+      { type: 'image', url: 'Montre-2.jpg' },
+      { type: 'image', url: 'Montre-3.jpg' },
+      { type: 'image', url: 'Montre-pres-1.jpg' },
+      { type: 'image', url: 'Montre-pres-2.jpg' },
+      { type: 'image', url: 'Montre-pres-3.jpg' },
+      { type: 'image', url: 'Montre-pres-4.jpg' },
     ]
   }
 ];
