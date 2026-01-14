@@ -709,24 +709,26 @@ const ClientLogosSection = () => (
 /* --- 5. COMPOSANTS DE PAGES (DÉFINIS AVANT LEUR UTILISATION) --- */
 
 const ProjectDetailPage = ({ project, onBack, onContactClick }) => {
+  const [selectedMedia, setSelectedMedia] = useState(null);
+  useEffect(() => { 
+        if (project) window.scrollTo(0, 0); 
+    }, [project]);
     if (!project) return null;
     useEffect(() => { window.scrollTo(0, 0); }, [project]);
-const [selectedMedia, setSelectedMedia] = useState(null);
     return (
         <section className="pt-32 pb-20 min-h-screen relative z-10 bg-black/30 backdrop-blur-md">
           {selectedMedia && (
                 <div 
                     className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 animate-in fade-in duration-300"
-                    onClick={() => setSelectedMedia(null)} // Ferme en cliquant à côté
+                    onClick={() => setSelectedMedia(null)}
                 >
                     <button 
                         className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors p-2"
-                        onClick={() => setSelectedMedia(null)} // Ferme avec le bouton X
+                        onClick={() => setSelectedMedia(null)}
                     >
                         <X size={32} />
                     </button>
                     
-                    {/* Contenu en grand */}
                     <div className="max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center" onClick={e => e.stopPropagation()}>
                         {selectedMedia.type === 'video' ? (
                             <video 
@@ -787,11 +789,34 @@ const [selectedMedia, setSelectedMedia] = useState(null);
                         <h3 className="text-2xl font-bold text-white mb-8 border-b border-white/10 pb-4">Aperçu du projet</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {project.content && project.content.map((item, index) => (
-                                <div key={index} className="relative w-full aspect-square rounded-sm overflow-hidden shadow-xl group bg-neutral-900 border border-white/5">
+                                <div 
+                                    key={index} 
+                                    className="relative w-full aspect-square rounded-sm overflow-hidden shadow-xl group bg-neutral-900 border border-white/5 cursor-pointer"
+                                    onClick={() => setSelectedMedia(item)}
+                                >
+                                    {/* Icône de zoom au survol */}
+                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 pointer-events-none">
+                                        <Maximize2 className="text-white drop-shadow-lg" size={32} />
+                                    </div>
+
                                     {item.type === 'video' ? (
-                                        <video src={item.url} controls className="w-full h-full object-cover" poster={item.thumbnail || ''}>Votre navigateur ne supporte pas la balise vidéo.</video>
+                                        <video 
+                                            src={item.url} 
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                                            poster={item.thumbnail || ''}
+                                            muted
+                                            loop
+                                            playsInline
+                                            onMouseEnter={(e) => e.target.play()}
+                                            onMouseLeave={(e) => { e.target.pause(); e.target.currentTime = 0; }}
+                                        />
                                     ) : (
-                                        <img src={item.url} alt={`${project.title} detail ${index + 1}`} loading="lazy" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
+                                        <img 
+                                            src={item.url} 
+                                            alt={`${project.title} detail ${index + 1}`} 
+                                            loading="lazy" 
+                                            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" 
+                                        />
                                     )}
                                 </div>
                             ))}
