@@ -1129,28 +1129,59 @@ const ContactPage = () => {
             <RevealOnScroll delay={100}>
                 <form onSubmit={handleSubmit} className="space-y-8 bg-white/5 p-8 md:p-12 border border-white/10 rounded-sm backdrop-blur-md shadow-2xl">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="space-y-2"><label className="text-xs uppercase tracking-wider text-neutral-500 font-bold">Nom Complet</label><input type="text" name="name" required value={formData.name} onChange={handleChange} className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-purple-500" /></div>
-                        <div className="space-y-2"><label className="text-xs uppercase tracking-wider text-neutral-500 font-bold">Entreprise</label><input type="text" name="company" required value={formData.company} onChange={handleChange} className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-purple-500" /></div>
+                        <div className="space-y-2">
+                            <label className="text-xs uppercase tracking-wider text-neutral-500 font-bold">Nom Complet <span className="text-red-500">*</span></label>
+                            <input type="text" name="name" required value={formData.name} onChange={handleChange} className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-purple-500" />
+                        </div>
+                        <div className="space-y-2">
+                            <label className="text-xs uppercase tracking-wider text-neutral-500 font-bold">Entreprise <span className="text-red-500">*</span></label>
+                            <input type="text" name="company" required value={formData.company} onChange={handleChange} className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-purple-500" />
+                        </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="space-y-2"><label className="text-xs uppercase tracking-wider text-neutral-500 font-bold">Email</label><input type="email" name="email" required value={formData.email} onChange={handleChange} className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-purple-500" /></div>
-                        <div className="space-y-2"><label className="text-xs uppercase tracking-wider text-neutral-500 font-bold">Téléphone</label><input type="tel" name="phone" required value={formData.phone} onChange={handleChange} className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-purple-500" /></div>
+                        <div className="space-y-2">
+                            <label className="text-xs uppercase tracking-wider text-neutral-500 font-bold">Email <span className="text-red-500">*</span></label>
+                            <input type="email" name="email" required value={formData.email} onChange={handleChange} className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-purple-500" />
+                        </div>
+                        <div className="space-y-2">
+                            <label className="text-xs uppercase tracking-wider text-neutral-500 font-bold">Téléphone <span className="text-red-500">*</span></label>
+                            <input type="tel" name="phone" required value={formData.phone} onChange={handleChange} className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-purple-500" />
+                        </div>
                     </div>
-                    <div className="space-y-2"><label className="text-xs uppercase tracking-wider text-neutral-500 font-bold">Projet</label>
+                    <div className="space-y-2">
+                        <label className="text-xs uppercase tracking-wider text-neutral-500 font-bold">Projet <span className="text-red-500">*</span></label>
                         <select name="type" required value={formData.type} onChange={handleChange} className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-purple-500 [&>option]:bg-neutral-900">
-                            <option value="" disabled>Sélectionnez un type</option><option value="Branding">Branding</option><option value="UI/UX">UI/UX</option><option value="Web">Web</option><option value="Autre">Autre</option>
+                            <option value="" disabled>Sélectionnez un type</option>
+                            <option value="Branding">Branding</option>
+                            <option value="UI/UX">UI/UX</option>
+                            <option value="Web">Web</option>
+                            <option value="Autre">Autre</option>
                         </select>
                     </div>
-                    {formData.type === 'Autre' && <div className="space-y-2"><label className="text-xs uppercase tracking-wider text-neutral-500 font-bold text-purple-400">Précisez</label><input type="text" name="customType" required value={formData.customType} onChange={handleChange} className="w-full bg-transparent border-b border-purple-500 py-3 text-white focus:outline-none" /></div>}
+                    {formData.type === 'Autre' && (
+                        <div className="space-y-2">
+                            <label className="text-xs uppercase tracking-wider text-neutral-500 font-bold text-purple-400">Précisez <span className="text-red-500">*</span></label>
+                            <input type="text" name="customType" required value={formData.customType} onChange={handleChange} className="w-full bg-transparent border-b border-purple-500 py-3 text-white focus:outline-none" />
+                        </div>
+                    )}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="space-y-2"><label className="text-xs uppercase tracking-wider text-neutral-500 font-bold">Budget</label><input type="text" name="budget" required value={formData.budget} onChange={handleChange} className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-purple-500" /></div>
-                        <div className="space-y-2"><label className="text-xs uppercase tracking-wider text-neutral-500 font-bold">Délai</label><input type="text" name="deadline" required value={formData.deadline} onChange={handleChange} className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-purple-500" /></div>
+                        <div className="space-y-2">
+                            <label className="text-xs uppercase tracking-wider text-neutral-500 font-bold">Budget <span className="text-red-500">*</span></label>
+                            <input type="text" name="budget" required value={formData.budget} onChange={handleChange} className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-purple-500" />
+                        </div>
+                        <div className="space-y-2">
+                            <label className="text-xs uppercase tracking-wider text-neutral-500 font-bold">Délai <span className="text-red-500">*</span></label>
+                            <input type="text" name="deadline" required value={formData.deadline} onChange={handleChange} className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-purple-500" />
+                        </div>
                     </div>
-                    <div className="space-y-2"><label className="text-xs uppercase tracking-wider text-neutral-500 font-bold">Description</label><textarea name="message" required rows="5" value={formData.message} onChange={handleChange} className="w-full bg-black/40 border border-white/10 p-4 text-white focus:outline-none focus:border-purple-500 resize-none rounded-sm"></textarea></div>
+                    <div className="space-y-2">
+                        <label className="text-xs uppercase tracking-wider text-neutral-500 font-bold">Description <span className="text-red-500">*</span></label>
+                        <textarea name="message" required rows="5" value={formData.message} onChange={handleChange} className="w-full bg-black/40 border border-white/10 p-4 text-white focus:outline-none focus:border-purple-500 resize-none rounded-sm"></textarea>
+                    </div>
                     <div className="pt-4 text-center md:text-left"><Button variant="accent" className="w-full md:w-auto justify-center">Envoyer la demande</Button></div>
                 </form>
             </RevealOnScroll>
-            <div className="mt-12 text-center border-t border-white/10 pt-8"><p className="text-neutral-500 text-sm">Ou contactez-moi : <a href="mailto:rusticolutecia2@gmail.com" className="text-white hover:text-purple-400">rusticolutecia2@gmail.com</a></p></div>
+            <div className="mt-12 text-center border-t border-white/10 pt-8"><p className="text-neutral-500 text-sm">Ou contactez-moi : <a href="mailto:helloarisidstudio@gmail.com" className="text-white hover:text-purple-400">helloarisidstudio@gmail.com</a></p></div>
         </div>
     </section>
     );
