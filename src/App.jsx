@@ -246,7 +246,7 @@ const TESTIMONIALS = [
   }
 ];
 
-const CLIENTS = ["COINCOQUIN", "MIXANDLIGHT", "TIC&TAC", "MLKIDS", "Dune", "Vertex", "Prism", "Echo", "Flux", "Nexa"];
+const CLIENTS = ["CoinCoquin", "Mixandlight", "Tic&Tac", "Mlkids", "Thalaïna Com", "Spicy 20's", "Midal's Juice", "Cherry Cherie"];
 
 const PROJECTS = [
   {
