@@ -294,7 +294,7 @@ const PROJECTS = [
   },
   {
     id: 3,
-    title: "Celeste Riciera",
+    title: "Celeste Riviera",
     category: "Identité visuelle évènementielle Luxe",
     image: "/CR-Façade Rooftop.png",
     year: "2025",
