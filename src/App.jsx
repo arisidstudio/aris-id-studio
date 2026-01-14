@@ -255,7 +255,7 @@ const PROJECTS = [
     category: "Branding / Direction Artistique",
     image: "/ICONE_SPICY.jpg",
     year: "2025",
-    role: "Direction Artistique",
+    role: "Direction Artistique & Brand design",
     description: "Spicy 20’s est le concept d’un podcast imaginé comme un miroir brut et authentique de la vingtaine. Entre journal intime, manifeste générationnel et safe space sans filtre, ce projet questionne l’identité, la liberté, les émotions intenses et les paradoxes d’une décennie qui façonne. L'objectif du projet est de créer une identité visuelle forte et distinctive pour un podcast qui parle vrai, qui bouscule et qui résonne avec les jeunes adultes. Le défi ici est de concevoir un univers visuel à la fois intime, audacieux et affirmé, capable de vivre sur tous les supports de communication d’un podcast (cover, réseaux, motion, print). Il m’a permis d’oser plus, de sortir des codes commerciaux, et de parler avec mes tripes. Chaque affiche est une émotion, un cri ou une réflexion habillée de formes et de mots",
     content: [
       { type: 'image', url: 'SPICY-LOGO.jpg' },
@@ -278,15 +278,18 @@ const PROJECTS = [
   },
   {
     id: 2,
-    title: "KINETIC RUN",
+    title: "Football cover",
     category: "Design Sportif",
-    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2000&auto=format&fit=crop",
-    year: "2023",
-    role: "Brand Designer & Merch",
-    description: "Conception de l'identité visuelle pour un marathon urbain nocturne. L'objectif était de capturer l'énergie du mouvement et la vibration de la ville la nuit. Création du logo, des affiches, de la signalétique et des maillots des coureurs.",
+    image: "/Foot-design-1",
+    year: "2025",
+    role: "Design d’affiches sportives",
+    description: "Ce projet explore le football comme un terrain d’expression visuelle et émotionnelle, au-delà du simple résultat sportif. Chaque visuel est pensé comme une affiche iconique, mettant en scène des joueurs majeurs du football contemporain à travers une direction artistique forte, immersive et assumée. L’objectif est de transformer le joueur en symbole : une figure de puissance, de jeunesse, de tension et d’explosivité. Les compositions jouent avec la couleur, la typographie, la superposition d’images et les textures graphiques pour créer des visuels percutants, immédiatement identifiables et conçus pour capter l’attention sur tous les supports digitaux et print. Le défi de ce projet réside dans l’équilibre entre performance sportive et narration visuelle. Chaque affiche raconte un moment, une attitude ou une énergie propre au joueur représenté, tout en respectant l’identité du club et l’univers du football moderne. Ce travail m’a permis d’affirmer un langage graphique orienté sport, d’expérimenter des compositions audacieuses et de concevoir des visuels pensés comme des objets de communication à forte valeur émotionnelle.",
     content: [
-      { type: 'image', url: 'https://images.unsplash.com/photo-1533561052604-c3beb6d55760?q=80&w=2000&auto=format&fit=crop' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1486218119243-13883505764c?q=80&w=2000&auto=format&fit=crop' }
+      { type: 'image', url: 'Foot-design-2.jpg' },
+      { type: 'image', url: 'Foot-design-3.jpg' },
+      { type: 'image', url: 'Foot-design-4.jpg' },
+      { type: 'image', url: 'Foot-design-5.jpg' },
+      { type: 'image', url: 'Foot-design-6.jpg' }
     ]
   },
   {
