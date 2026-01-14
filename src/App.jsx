@@ -717,7 +717,7 @@ const ProjectDetailPage = ({ project, onBack, onContactClick }) => {
         <section className="pt-32 pb-20 min-h-screen relative z-10 bg-black/30 backdrop-blur-md">
           {selectedMedia && (
                 <div 
-                    className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 animate-in fade-in duration-300"
+                    className="fixed inset-0 z-[9999] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 animate-in fade-in duration-300"
                     onClick={() => setSelectedMedia(null)}
                 >
                     <button 
