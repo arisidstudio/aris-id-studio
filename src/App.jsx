@@ -323,15 +323,27 @@ const PROJECTS = [
   },
   {
     id: 4,
-    title: "VELVET SOUNDS",
-    category: "Cover Design",
-    image: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=2000&auto=format&fit=crop",
-    year: "2023",
-    role: "Illustrateur & Graphiste",
-    description: "Série de pochettes pour un label de musique électronique Lo-Fi. L'idée était de créer une synesthésie visuelle : des textures douces et des couleurs chaudes pour évoquer le son analogique et nostalgique des productions.",
+    title: "The Morning Party",
+    category: "Direction Artistique expressive avec un style plus punchy",
+    image: "/TMP-logo-1.jpg",
+    year: "2025",
+    role: "Brand designer & DA",
+    description: "Une identité visuelle vibrante imaginée pour une soirée alliant ambiance matinale, musique électro et culture urbaine. L’objectif est de capter l’énergie de l’aube et la traduire graphiquement en un univers frais, festif et visuellement marquant. Mon objectif pour ce projet, est de créer une direction artistique forte et cohérente pour un événement alternatif, avec une charte visuelle capable de se décliner sur affiches, réseaux sociaux, merchandising et habillages numériques. Ce projet m’a permis d’expérimenter une DA expressive et d’assumer un style plus punchy. Il reflète ma capacité à créer un univers fort autour d’un concept simple.",
     content: [
-      { type: 'image', url: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2000&auto=format&fit=crop' },
-      { type: 'image', url: 'https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=2000&auto=format&fit=crop' }
+      { type: 'image', url: 'TMP-logo-2.jpg' },
+      { type: 'image', url: 'TMP-logo-3.jpg' },
+      { type: 'image', url: 'TMP-logo-mockup.jpg' },
+      { type: 'image', url: 'TMP-post-1.jpg' },
+      { type: 'image', url: 'TMP-post-2.jpg' },
+      { type: 'image', url: 'TMP-goodies-1.jpg' },
+      { type: 'image', url: 'TMP-goodies-2.jpg' },
+      { type: 'image', url: 'TMP-goodies-3.jpg' },
+      { type: 'image', url: 'TMP-goodies-4.jpg' },
+      { type: 'image', url: 'TMP-goodies-5.jpg' },
+      { type: 'image', url: 'TMP-goodies-6.jpg' },
+      { type: 'image', url: 'TMP-goodies-7.jpg' },
+      { type: 'image', url: 'TMP-goodies-8.jpg' }
+
     ]
   },
   {
