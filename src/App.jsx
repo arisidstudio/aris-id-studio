@@ -260,6 +260,7 @@ const PROJECTS = [
     description: "Spicy 20’s est le concept d’un podcast imaginé comme un miroir brut et authentique de la vingtaine. Entre journal intime, manifeste générationnel et safe space sans filtre, ce projet questionne l’identité, la liberté, les émotions intenses et les paradoxes d’une décennie qui façonne. L'objectif du projet est de créer une identité visuelle forte et distinctive pour un podcast qui parle vrai, qui bouscule et qui résonne avec les jeunes adultes. Le défi ici est de concevoir un univers visuel à la fois intime, audacieux et affirmé, capable de vivre sur tous les supports de communication d’un podcast (cover, réseaux, motion, print). Il m’a permis d’oser plus, de sortir des codes commerciaux, et de parler avec mes tripes. Chaque affiche est une émotion, un cri ou une réflexion habillée de formes et de mots",
     content: [
       { type: 'image', url: 'SPICY-LOGO.jpg' },
+      { type: 'image', url: 'ICONE_SPICY.jpg' },
       { type: 'image', url: 'BG-SPICY 1.jpg' },
       { type: 'image', url: 'BG-SPICY 2.jpg' },
       { type: 'image', url: 'BG-SPICY 3.jpg' },
@@ -286,6 +287,7 @@ const PROJECTS = [
     role: "Design d’affiches sportives",
     description: "Ce projet explore le football comme un terrain d’expression visuelle et émotionnelle, au-delà du simple résultat sportif. Chaque visuel est pensé comme une affiche iconique, mettant en scène des joueurs majeurs du football contemporain à travers une direction artistique forte, immersive et assumée. L’objectif est de transformer le joueur en symbole : une figure de puissance, de jeunesse, de tension et d’explosivité. Les compositions jouent avec la couleur, la typographie, la superposition d’images et les textures graphiques pour créer des visuels percutants, immédiatement identifiables et conçus pour capter l’attention sur tous les supports digitaux et print. Le défi de ce projet réside dans l’équilibre entre performance sportive et narration visuelle. Chaque affiche raconte un moment, une attitude ou une énergie propre au joueur représenté, tout en respectant l’identité du club et l’univers du football moderne. Ce travail m’a permis d’affirmer un langage graphique orienté sport, d’expérimenter des compositions audacieuses et de concevoir des visuels pensés comme des objets de communication à forte valeur émotionnelle.",
     content: [
+      { type: 'image', url: 'Foot-design-1.jpg' },
       { type: 'image', url: 'Foot-design-2.jpg' },
       { type: 'image', url: 'Foot-design-3.jpg' },
       { type: 'image', url: 'Foot-design-4.jpg' },
@@ -302,6 +304,7 @@ const PROJECTS = [
     role: "Direction artistique & Brand designer",
     description: "Tic&Tac est un duo créatif formé pour rendre le design plus accessible, plus fun et plus impactant. Ce projet de branding vise à capturer l’essence de cette complicité créative à travers une identité visuelle pétillante, jeune et mémorable. L'objectif du projet est de concevoir une identité visuelle complète pour une micro-agence créative, incarnant l’esprit de collaboration, d’énergie positive et de vision partagée. Créer un univers graphique cohérent, adaptable sur tous supports : digital, print, social media, goodies. Ce projet m’a permis de développer ma capacité à créer une marque à deux voix, en traduisant visuellement une énergie partagée et une synergie créative.",
     content: [
+      { type: 'image', url: 'Tic-tac-logo-1.jpg' },
       { type: 'image', url: 'Tic-tac-logo-papier.jpg' },
       { type: 'image', url: 'Tic-tac-logo-2.jpg' },
       { type: 'image', url: 'Tic-tac-BG.jpg' },
@@ -331,6 +334,7 @@ const PROJECTS = [
     description: "Une identité visuelle vibrante imaginée pour une soirée alliant ambiance matinale, musique électro et culture urbaine. L’objectif est de capter l’énergie de l’aube et la traduire graphiquement en un univers frais, festif et visuellement marquant. Mon objectif pour ce projet, est de créer une direction artistique forte et cohérente pour un événement alternatif, avec une charte visuelle capable de se décliner sur affiches, réseaux sociaux, merchandising et habillages numériques. Ce projet m’a permis d’expérimenter une DA expressive et d’assumer un style plus punchy. Il reflète ma capacité à créer un univers fort autour d’un concept simple.",
     content: [
       { type: 'image', url: 'TMP-logo-1.jpg' },
+      { type: 'image', url: 'TMP-logo-mockup.jpg' },
       { type: 'image', url: 'TMP-logo-2.jpg' },
       { type: 'image', url: 'TMP-logo-3.jpg' },
       { type: 'image', url: 'TMP-post-1.jpg' },
@@ -355,6 +359,7 @@ const PROJECTS = [
     role: "Brand Designer",
     description: "Cherry Chérie est une application pensée pour accompagner les femmes dans leur cycle menstruel avec douceur, fun et sororité. Ce projet mêle gamification, self-care et design émotionnel, au service d’une expérience bien-être libératrice, éducative et stylée. L'objectif du projet, c'est de créer une identité visuelle complète pour une appli bien-être dédiée au suivi du cycle menstruel, à la santé intime et à l’écoute de soi. L’enjeu , construire un univers rassurant mais moderne, frais sans être enfantin, et suffisamment modulable pour une appli mobile + une marque lifestyle forte. Il m’a permis d’explorer un branding au croisement de la tech féminine et du bien-être intime, avec une vraie attention portée à l’expérience émotionnelle des utilisatrices.",
     content: [
+      { type: 'image', url: 'CC-logo.jpg' },
       { type: 'image', url: 'CC-pres-logo.jpg' },
       { type: 'image', url: 'CC-pres-logo-2.jpg' },
       { type: 'image', url: 'CC-couleurs.jpg' },
@@ -374,6 +379,7 @@ const PROJECTS = [
     role: "Direction Artistique & product design",
     description: "Ce projet est un shooting produit imaginé autour d’une montre connectée, pensé comme un objet de design et non comme un simple produit technologique. L’objectif est de sublimer l’objet à travers des mises en scène élégantes et immersives, en jouant avec la lumière, les textures et les matières. Le travail repose sur une approche visuelle premium, mêlant minimalisme, inspirations naturelles et ambiance luxueuse. Chaque image met en valeur les lignes, les finitions et l’identité du produit, tout en créant une atmosphère forte et émotionnelle. Ce projet illustre ma capacité à concevoir des shootings produits cohérents, à construire une narration visuelle autour d’un objet et à produire des visuels adaptés aux supports digitaux et publicitaires.",
     content: [
+      { type: 'image', url: 'Montre-1.jpg' }
       { type: 'image', url: 'Montre-2.jpg' },
       { type: 'image', url: 'Montre-3.jpg' },
       { type: 'image', url: 'Montre-pres-1.jpg' },
