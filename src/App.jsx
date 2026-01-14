@@ -719,7 +719,7 @@ const ProjectDetailPage = ({ project, onBack, onContactClick }) => {
                     <RevealOnScroll delay={100}>
                         <div className="lg:col-span-2">
                             <h3 className="text-2xl font-bold text-white mb-6">De quoi s'agit-il ?</h3>
-                            <p className="text-neutral-300 text-lg leading-relaxed font-light whitespace-pre-line">{project.description}</p>
+                            <p className="text-neutral-300 text-lg leading-relaxed font-light whitespace-pre-line text-justify">{project.description}</p>
                         </div>
                     </RevealOnScroll>
                     <RevealOnScroll delay={200}>
