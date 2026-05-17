@@ -254,7 +254,7 @@ const PROJECTS = [
     id: 7,
     title: "MORWEN AUTOMOBILE",
     category: "Branding",
-    image: "/MORWEN_Primary_Color_2.png",
+    image: "/MORWEN_2.jpg",
     year: "2026",
     role: "Brand Designer & DA",
     client: "MORWEN AUTOMOBILE",
