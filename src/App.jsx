@@ -251,6 +251,30 @@ const CLIENTS = ["CoinCoquin", "Mixandlight", "Tic&Tac", "Mlkids", "Thalaïna Co
 
 const PROJECTS = [
   {
+    id: 7,
+    title: "MORWEN AUTOMOBILE",
+    category: "Branding",
+    image: "/MORWEN_Primary_Color_2.png",
+    year: "2026",
+    role: "Brand Designer & DA",
+    client: "MORWEN AUTOMOBILE",
+    description: "MORWEN Automobile est une vision futuriste de l'automobile premium, pensée comme une rencontre entre puissance, précision et émotion. Imaginée comme une marque au design silencieux mais affirmé, MORWEN explore une nouvelle façon de percevoir la performance : plus fluide, plus minimaliste, plus instinctive. À travers une direction artistique sombre et cinématique, ce projet construit un univers visuel capable d'incarner l'élégance technologique et la présence d'une marque automobile de nouvelle génération.\n\nL'objectif était de créer une identité forte, crédible et immédiatement reconnaissable, capable de vivre sur différents supports : campagnes visuelles, affiches, motion design, branding et concept automobile. Chaque visuel a été conçu pour transmettre une sensation de mouvement, de mystère et de maîtrise, tout en installant une esthétique premium inspirée des codes du luxe et du futur.",
+    content: [
+      { type: 'image', url: 'MORWEN_Primary_Color_2.png' },
+      { type: 'image', url: 'MORWEN_Primary_Tomato.png' },
+      { type: 'image', url: 'MORWEN_Secondary_Color_2.png' },
+      { type: 'image', url: 'MORWEN_Secondary_Tomato.png' },
+      { type: 'image', url: 'MORWEN_Secondary_Color_4.png' },
+      { type: 'image', url: 'MORWEN_3.jpg' },
+      { type: 'image', url: 'MORWEN_2.jpg' },
+      { type: 'image', url: 'VISUELS_MORWEN_1.png' },
+      { type: 'image', url: 'VISUELS_MORWEN_2.png' },
+      { type: 'image', url: 'VISUELS_MORWEN_3.png' },
+      { type: 'image', url: 'VISUELS_MORWEN_4.png' },
+      { type: 'image', url: 'MORWEN_8.jpg' }
+    ]
+  },
+  {
     id: 1,
     title: "Spicy 20's",
     category: "Branding / Direction Artistique",
@@ -368,30 +392,6 @@ const PROJECTS = [
       { type: 'image', url: 'CC-favicon.jpg' },
       { type: 'image', url: 'CC-post-1.jpg' },
       { type: 'image', url: 'CC-post-2.jpg' },
-    ]
-  },
-  {
-    id: 7,
-    title: "MORWEN AUTOMOBILE",
-    category: "Branding",
-    image: "/MORWEN_Primary_Color_2.png",
-    year: "2026",
-    role: "Brand Designer & DA",
-    client: "MORWEN AUTOMOBILE",
-    description: "MORWEN Automobile est une vision futuriste de l'automobile premium, pensée comme une rencontre entre puissance, précision et émotion. Imaginée comme une marque au design silencieux mais affirmé, MORWEN explore une nouvelle façon de percevoir la performance : plus fluide, plus minimaliste, plus instinctive. À travers une direction artistique sombre et cinématique, ce projet construit un univers visuel capable d'incarner l'élégance technologique et la présence d'une marque automobile de nouvelle génération.\n\nL'objectif était de créer une identité forte, crédible et immédiatement reconnaissable, capable de vivre sur différents supports : campagnes visuelles, affiches, motion design, branding et concept automobile. Chaque visuel a été conçu pour transmettre une sensation de mouvement, de mystère et de maîtrise, tout en installant une esthétique premium inspirée des codes du luxe et du futur.",
-    content: [
-      { type: 'image', url: 'MORWEN_Primary_Color_2.png' },
-      { type: 'image', url: 'MORWEN_Primary_Tomato.png' },
-      { type: 'image', url: 'MORWEN_Secondary_Color_2.png' },
-      { type: 'image', url: 'MORWEN_Secondary_Tomato.png' },
-      { type: 'image', url: 'MORWEN_Secondary_Color_4.png' },
-      { type: 'image', url: 'MORWEN_3.jpg' },
-      { type: 'image', url: 'MORWEN_2.jpg' },
-      { type: 'image', url: 'VISUELS_MORWEN_1.png' },
-      { type: 'image', url: 'VISUELS_MORWEN_2.png' },
-      { type: 'image', url: 'VISUELS_MORWEN_3.png' },
-      { type: 'image', url: 'VISUELS_MORWEN_4.png' },
-      { type: 'image', url: 'MORWEN_8.jpg' }
     ]
   },
   {
