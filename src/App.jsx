@@ -82,7 +82,7 @@ const SERVICES = [
   {
     title: "Branding & Identité",
     desc: "Création de logotypes, chartes graphiques et univers de marque cohérents qui marquent les esprits.",
-    tags: ["Logo", "Charte", "Stratégie"]
+    tags: ["Logo", "Charte Graphique", "Stratégie"]
   },
   {
     title: "UI/UX Design",
@@ -488,7 +488,7 @@ const Navigation = ({ currentPage, setCurrentPage, onLogoClick }) => {
     { name: "Accueil", page: "home" },
     { name: "Projets", page: "portfolio" },
     { name: "Services", page: "services" },
-    { name: "Offres", page: "offers" },
+    ...(import.meta.env.DEV ? [{ name: "Offres", page: "offers" }] : []),
     { name: "Parcours", page: "resume" },
     { name: "À Propos", page: "about" },
     { name: "Contact", page: "contact" }
@@ -608,8 +608,13 @@ const Footer = ({ setCurrentPage }) => (
       <div>
         <h3 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Navigation</h3>
         <ul className="space-y-4">
-          {['Accueil', 'Projets', 'Services', 'Offres', 'Parcours', 'À Propos', 'Contact'].map((item, idx) => {
-             const pages = ['home', 'portfolio', 'services', 'offers', 'resume', 'about', 'contact'];
+          {(import.meta.env.DEV
+            ? ['Accueil', 'Projets', 'Services', 'Offres', 'Parcours', 'À Propos', 'Contact']
+            : ['Accueil', 'Projets', 'Services', 'Parcours', 'À Propos', 'Contact']
+          ).map((item, idx) => {
+             const pages = import.meta.env.DEV
+               ? ['home', 'portfolio', 'services', 'offers', 'resume', 'about', 'contact']
+               : ['home', 'portfolio', 'services', 'resume', 'about', 'contact'];
              return (
               <li key={item}>
                 <button 
@@ -1498,7 +1503,7 @@ const App = () => {
       case 'portfolio': return <PortfolioPage onOpenProject={handleOpenProject} />;
       case 'services': return <ServicesPage />;
       case 'about': return <AboutPage />;
-      case 'offers': return <OffersPage />;
+      case 'offers': return import.meta.env.DEV ? <OffersPage /> : <HomePage setCurrentPage={setCurrentPage} onOpenProject={handleOpenProject} />;
       case 'resume': return <ResumePage />;
       case 'contact': return <ContactPage />;
       case 'legal': return <LegalPage />;
