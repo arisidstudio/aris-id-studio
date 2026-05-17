@@ -1515,24 +1515,42 @@ const HomePage = ({ setCurrentPage, onOpenProject }) => (
 /* --- 5. COMPOSANT PRINCIPAL --- */
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState(() => {
+    const hash = window.location.hash.replace('#', '');
+    return hash || 'home';
+  });
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const handleOpenProject = (project) => { setSelectedProject(project); setCurrentPage('project-detail'); };
-  const handleBackToProjects = () => { setSelectedProject(null); setCurrentPage('portfolio'); };
+  const navigateTo = (page) => {
+    window.history.pushState({ page }, '', `#${page}`);
+    setCurrentPage(page);
+  };
+
+  useEffect(() => {
+    const handlePopState = (e) => {
+      const page = e.state?.page || window.location.hash.replace('#', '') || 'home';
+      if (page !== 'project-detail') setSelectedProject(null);
+      setCurrentPage(page);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const handleOpenProject = (project) => { setSelectedProject(project); navigateTo('project-detail'); };
+  const handleBackToProjects = () => { setSelectedProject(null); navigateTo('portfolio'); };
 
   const renderPage = () => {
     switch(currentPage) {
-      case 'home': return <HomePage setCurrentPage={setCurrentPage} onOpenProject={handleOpenProject} />;
+      case 'home': return <HomePage setCurrentPage={navigateTo} onOpenProject={handleOpenProject} />;
       case 'portfolio': return <PortfolioPage onOpenProject={handleOpenProject} />;
       case 'services': return <ServicesPage />;
       case 'about': return <AboutPage />;
-      case 'offers': return import.meta.env.DEV ? <OffersPage /> : <HomePage setCurrentPage={setCurrentPage} onOpenProject={handleOpenProject} />;
+      case 'offers': return import.meta.env.DEV ? <OffersPage /> : <HomePage setCurrentPage={navigateTo} onOpenProject={handleOpenProject} />;
       case 'resume': return <ResumePage />;
       case 'contact': return <ContactPage />;
       case 'legal': return <LegalPage />;
-      case 'project-detail': return <ProjectDetailPage project={selectedProject} onBack={handleBackToProjects} onContactClick={() => setCurrentPage('contact')} />;
-      default: return <HomePage setCurrentPage={setCurrentPage} onOpenProject={handleOpenProject} />;
+      case 'project-detail': return <ProjectDetailPage project={selectedProject} onBack={handleBackToProjects} onContactClick={() => navigateTo('contact')} />;
+      default: return <HomePage setCurrentPage={navigateTo} onOpenProject={handleOpenProject} />;
     }
   };
 
@@ -1550,9 +1568,9 @@ const App = () => {
         <div className="absolute bottom-[-20%] left-[20%] w-[50%] h-[50%] rounded-full bg-blue-600/30 blur-[100px] animate-[blob-pulse_15s_infinite_ease-in-out] mix-blend-screen"></div>
       </div>
 
-      <Navigation currentPage={currentPage} setCurrentPage={(p) => { setSelectedProject(null); setCurrentPage(p); }} onLogoClick={() => setCurrentPage('about')} />
+      <Navigation currentPage={currentPage} setCurrentPage={(p) => { setSelectedProject(null); navigateTo(p); }} onLogoClick={() => navigateTo('about')} />
       <main className="relative z-10 min-h-screen">{renderPage()}</main>
-      <Footer setCurrentPage={(p) => { setSelectedProject(null); setCurrentPage(p); }} />
+      <Footer setCurrentPage={(p) => { setSelectedProject(null); navigateTo(p); }} />
     </div>
   );
 };
