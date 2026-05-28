@@ -230,6 +230,13 @@ const TESTIMONIALS = [
     role: "Chargée de communication — CEO Thalaïna Com",
     text: "Lutecia a su comprendre exactement l'univers que je voulais transmettre et le retranscrire à travers un logo et des déclinaisons cohérentes et professionnelles. J'ai énormément apprécié sa patience et son implication, peaufinant chaque détail jusqu'au résultat parfait. Un vrai plaisir de collaborer avec elle.",
     image: "/Thalaiana_Photo.png"
+  },
+  {
+    id: 3,
+    name: "Marion de Souza",
+    role: "Graphiste & IA Addict — CEO Branding for All",
+    text: "J'ai collaboré avec Lutecia sur plusieurs projets IA et design : créative, réactive et investie à 100%, elle aborde chaque projet avec sérieux et professionnalisme. Le résultat est toujours propre, de qualité, et à la hauteur des attentes. Du 10/10, je la recommande sans hésiter.",
+    image: "/Marion_Photo.jpeg"
   }
 ];
 
