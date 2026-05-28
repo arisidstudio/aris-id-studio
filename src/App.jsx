@@ -229,7 +229,7 @@ const TESTIMONIALS = [
     name: "Thalaïna TEIXEIRA",
     role: "Chargée de communication — CEO Thalaïna Com",
     text: "Lutecia a su comprendre exactement l'univers que je voulais transmettre et le retranscrire à travers un logo et des déclinaisons cohérentes et professionnelles. J'ai énormément apprécié sa patience et son implication, peaufinant chaque détail jusqu'au résultat parfait. Un vrai plaisir de collaborer avec elle.",
-    image: "/Thalaïna_Photo.png"
+    image: "/Thalaiana_Photo.png"
   }
 ];
 
