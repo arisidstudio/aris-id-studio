@@ -219,31 +219,17 @@ const RESUME_DATA = {
 const TESTIMONIALS = [
   {
     id: 1,
-    name: "Thomas R.",
-    role: "CEO, TechStart",
-    text: "Une vision incroyable. Lutécia a su capter l'essence de notre technologie pour en faire une marque forte.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
+    name: "Alice PILASTRE",
+    role: "Ostéopathe animale — CEO Les Centauresses",
+    text: "Nous avons travaillé avec Lutecia pour la création de la charte graphique des Centauresses ainsi que sur une partie du design du site internet, et nous sommes ravies du résultat. Elle a très rapidement compris notre philosophie, l'ambiance que nous voulions transmettre et l'identité du projet. Son travail est à la fois très esthétique, cohérent et fidèle à nos intentions, avec beaucoup de goût dans les choix visuels. En plus d'être créative, elle a été rapide, efficace et agréable dans les échanges tout au long du projet. Merci encore pour ce beau travail qui reflète parfaitement l'univers des Centauresses.",
+    image: "/Alice_Photo.png"
   },
   {
     id: 2,
-    name: "Sophie M.",
-    role: "Fondatrice, EcoLife",
-    text: "Plus qu'un design, c'est une véritable stratégie. Le site web a doublé mes conversions en un mois.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop"
-  },
-  {
-    id: 3,
-    name: "Marc D.",
-    role: "Directeur, SportEvent",
-    text: "Réactivité et créativité au top. L'identité visuelle de notre marathon a fait l'unanimité.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop"
-  },
-  {
-    id: 4,
-    name: "Elise B.",
-    role: "Artiste, MusicLabel",
-    text: "Les covers sont magnifiques. Elles racontent exactement l'histoire de chaque morceau. Merci !",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop"
+    name: "Thalaïna TEIXEIRA",
+    role: "Chargée de communication — CEO Thalaïna Com",
+    text: "J'ai eu la chance de travailler avec Lutecia sur la refonte complète de ma charte graphique et de mon branding, et honnêtement je ne peux que recommander son travail. Elle a su comprendre exactement l'univers et l'image que je voulais transmettre, puis le retranscrire parfaitement à travers un logo et plusieurs déclinaisons totalement cohérentes et professionnelles. Au-delà de son énorme talent, j'ai aussi énormément apprécié sa patience et son implication tout au long du projet. Elle n'a jamais hésité à faire des ajustements et à peaufiner chaque détail jusqu'à obtenir un résultat parfait. C'était un vrai plaisir de collaborer avec quelqu'un d'aussi créative, à l'écoute et investie dans son travail. Merci encore pour tout.",
+    image: "/Thalaïna_Photo.png"
   }
 ];
 
