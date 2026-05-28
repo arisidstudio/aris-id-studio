@@ -194,9 +194,15 @@ const RESUME_DATA = {
   ],
   education: [
     {
-      degree: "Ms 2 Communication Digitale & E-Influence",
+      degree: "Ms 2 Direction Artistique",
+      school: "ECS Média School",
+      period: "2026 - 2027",
+      location: "Nice, France"
+    },
+    {
+      degree: "Ms 1 Communication Digitale & Design Numérique",
       school: "Digital College",
-      period: "2024 - 2026",
+      period: "2024 - 2025",
       location: "Nice, France"
     },
     {
