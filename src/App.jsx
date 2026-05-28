@@ -221,14 +221,14 @@ const TESTIMONIALS = [
     id: 1,
     name: "Alice PILASTRE",
     role: "Ostéopathe animale — CEO Les Centauresses",
-    text: "Nous avons travaillé avec Lutecia pour la création de la charte graphique des Centauresses ainsi que sur une partie du design du site internet, et nous sommes ravies du résultat. Elle a très rapidement compris notre philosophie, l'ambiance que nous voulions transmettre et l'identité du projet. Son travail est à la fois très esthétique, cohérent et fidèle à nos intentions, avec beaucoup de goût dans les choix visuels. En plus d'être créative, elle a été rapide, efficace et agréable dans les échanges tout au long du projet. Merci encore pour ce beau travail qui reflète parfaitement l'univers des Centauresses.",
+    text: "Lutecia a très rapidement compris notre philosophie et l'identité du projet. Son travail est esthétique, cohérent et fidèle à nos intentions. En plus d'être créative, elle a été rapide, efficace et agréable dans les échanges. Merci pour ce beau travail qui reflète parfaitement l'univers des Centauresses.",
     image: "/Alice_Photo.png"
   },
   {
     id: 2,
     name: "Thalaïna TEIXEIRA",
     role: "Chargée de communication — CEO Thalaïna Com",
-    text: "J'ai eu la chance de travailler avec Lutecia sur la refonte complète de ma charte graphique et de mon branding, et honnêtement je ne peux que recommander son travail. Elle a su comprendre exactement l'univers et l'image que je voulais transmettre, puis le retranscrire parfaitement à travers un logo et plusieurs déclinaisons totalement cohérentes et professionnelles. Au-delà de son énorme talent, j'ai aussi énormément apprécié sa patience et son implication tout au long du projet. Elle n'a jamais hésité à faire des ajustements et à peaufiner chaque détail jusqu'à obtenir un résultat parfait. C'était un vrai plaisir de collaborer avec quelqu'un d'aussi créative, à l'écoute et investie dans son travail. Merci encore pour tout.",
+    text: "Lutecia a su comprendre exactement l'univers que je voulais transmettre et le retranscrire à travers un logo et des déclinaisons cohérentes et professionnelles. J'ai énormément apprécié sa patience et son implication, peaufinant chaque détail jusqu'au résultat parfait. Un vrai plaisir de collaborer avec elle.",
     image: "/Thalaïna_Photo.png"
   }
 ];
@@ -666,13 +666,8 @@ const Footer = ({ setCurrentPage }) => (
 const TestimonialsSection = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const next = () => {
-        setCurrentIndex((prev) => (prev + 1) % TESTIMONIALS.length);
-    };
-
-    const prev = () => {
-        setCurrentIndex((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
-    };
+    const next = () => setCurrentIndex((prev) => (prev + 1) % TESTIMONIALS.length);
+    const prev = () => setCurrentIndex((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
 
     const getVisibleIndices = () => {
         const len = TESTIMONIALS.length;
@@ -687,15 +682,13 @@ const TestimonialsSection = () => {
     return (
         <section className="py-24 border-t border-white/10 overflow-hidden">
             <RevealOnScroll>
-                <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-16 text-center uppercase">CE QU'ILS DISENT</h2>
+                <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-20 text-center uppercase">CE QU'ILS DISENT</h2>
             </RevealOnScroll>
 
-            <div className="relative max-w-7xl mx-auto px-6 h-[500px] flex items-center justify-center">
-                
+            <div className="relative max-w-7xl mx-auto px-6 flex items-center justify-center" style={{ minHeight: '480px' }}>
                 <button onClick={prev} className="absolute left-4 md:left-10 z-30 w-12 h-12 rounded-full border border-white/20 bg-black/50 flex items-center justify-center text-white hover:bg-purple-600 hover:border-purple-600 transition-all backdrop-blur-sm">
                     <ChevronLeft size={24} />
                 </button>
-                
                 <button onClick={next} className="absolute right-4 md:right-10 z-30 w-12 h-12 rounded-full border border-white/20 bg-black/50 flex items-center justify-center text-white hover:bg-purple-600 hover:border-purple-600 transition-all backdrop-blur-sm">
                     <ChevronRight size={24} />
                 </button>
@@ -703,20 +696,20 @@ const TestimonialsSection = () => {
                 <div className="flex items-center justify-center w-full relative">
                     {visibleIndices.map((idx, position) => {
                         const item = TESTIMONIALS[idx];
-                        const isCenter = position === 1; 
+                        const isCenter = position === 1;
                         return (
-                            <div 
-                                key={`${item.id}-${idx}`} 
+                            <div
+                                key={`${item.id}-${position}`}
                                 className={`absolute transition-all duration-700 ease-in-out px-4 ${isCenter ? 'z-20 opacity-100 scale-100 translate-x-0' : 'z-10 opacity-40 scale-75 cursor-pointer'} ${position === 0 ? '-translate-x-[60%] md:-translate-x-[350px]' : ''} ${position === 2 ? 'translate-x-[60%] md:translate-x-[350px]' : ''}`}
                                 onClick={() => { if (position === 0) prev(); if (position === 2) next(); }}
                             >
                                 <div className={`w-[300px] md:w-[400px] p-8 md:p-10 rounded-2xl backdrop-blur-md border transition-all duration-500 flex flex-col items-center text-center ${isCenter ? 'bg-white/10 border-purple-500/50 shadow-[0_0_50px_rgba(147,51,234,0.2)]' : 'bg-white/5 border-white/5 grayscale'}`}>
-                                    <div className={`w-24 h-24 mb-6 relative rounded-full p-1 ${isCenter ? 'bg-gradient-to-r from-purple-500 to-blue-500' : 'bg-white/10'}`}>
+                                    <div className={`w-24 h-24 mb-6 rounded-full p-1 shrink-0 ${isCenter ? 'bg-gradient-to-r from-purple-500 to-blue-500' : 'bg-white/10'}`}>
                                         <img src={item.image} alt={item.name} className="w-full h-full object-cover rounded-full border-4 border-black" />
                                     </div>
-                                    <p className={`italic mb-6 leading-relaxed ${isCenter ? 'text-white text-lg' : 'text-neutral-500 text-sm'}`}>"{item.text}"</p>
+                                    <p className={`italic mb-6 leading-relaxed ${isCenter ? 'text-white text-base' : 'text-neutral-500 text-sm'}`}>"{item.text}"</p>
                                     <div className="mt-auto">
-                                        <h4 className={`font-bold uppercase tracking-wider ${isCenter ? 'text-white text-lg' : 'text-neutral-400 text-sm'}`}>{item.name}</h4>
+                                        <h4 className={`font-bold uppercase tracking-wider ${isCenter ? 'text-white text-base' : 'text-neutral-400 text-sm'}`}>{item.name}</h4>
                                         <span className={`text-xs ${isCenter ? 'text-purple-400' : 'text-neutral-600'}`}>{item.role}</span>
                                     </div>
                                 </div>
