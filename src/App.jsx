@@ -1396,7 +1396,7 @@ const HomePage = ({ setCurrentPage, onOpenProject }) => (
         {/* Phrase en double supprimée ici */}
         <RevealOnScroll delay={300}>
           <div className="flex flex-col md:flex-row gap-6 justify-center mt-12">
-            <Button variant="accent" onClick={() => setCurrentPage(import.meta.env.DEV ? 'offers' : 'contact')}>DÉCOUVRIR LES OFFRES <ArrowRight size={20} /></Button>
+            <Button variant="accent" onClick={() => setCurrentPage('portfolio')}>DÉCOUVRIR MES PROJETS <ArrowRight size={20} /></Button>
             <Button variant="outline" onClick={() => setCurrentPage('contact')}>Démarrer un projet</Button>
           </div>
         </RevealOnScroll>
