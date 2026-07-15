@@ -250,6 +250,29 @@ const CLIENTS = ["CoinCoquin", "Mixandlight", "Tic&Tac", "Mlkids", "Thalaïna Co
 
 const PROJECTS = [
   {
+    id: 8,
+    title: "No Mag",
+    category: "Branding",
+    image: "/No_Mag Tech_1.jpg",
+    year: "2026",
+    role: "Brand Designer & DA",
+    description: "NO mag-tech est une entreprise tech à l'âme de magazine. Elle ne se contente pas de proposer des solutions technologiques, elle informe, analyse et raconte l'actualité tech à travers un regard éditorial assumé.\n\nL'objectif était de créer une identité qui porte ces deux univers sans les opposer. Une marque reconnaissable, ancrée dans le monde tech, mais qui refuse ses codes les plus attendus. Chaque décision visuelle, du logo \"no\" en italique bold au motif damier, a été pensée pour installer une présence forte et mémorable, sur tous les supports.",
+    content: [
+      { type: 'image', url: 'No_Mag Tech_1.jpg' },
+      { type: 'image', url: 'No Mag Tech_2.jpg' },
+      { type: 'image', url: 'No Mag Tech_3.jpg' },
+      { type: 'image', url: 'No Mag Tech_4.jpg' },
+      { type: 'image', url: 'No Mag Tech_5.jpg' },
+      { type: 'image', url: 'No Mag Tech_6.jpg' },
+      { type: 'image', url: 'No Mag Tech_7.jpg' },
+      { type: 'image', url: 'No Mag Tech_8.jpg' },
+      { type: 'image', url: 'No Mag Tech_9.jpg' },
+      { type: 'image', url: 'No Mag Tech_10.jpg' },
+      { type: 'image', url: 'No Mag Tech_11.jpg' },
+      { type: 'image', url: 'No Mag Tech_12.jpg' }
+    ]
+  },
+  {
     id: 7,
     title: "MORWEN AUTOMOBILE",
     category: "Branding",
