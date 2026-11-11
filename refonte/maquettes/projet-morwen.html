@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maquette — Projet-Morwen</title>
+<!-- Maquette de référence ARIS ID (statique). Voir HANDOFF.md. -->
+<style>
+@font-face{font-family:"Clash Display";src:url(../assets/fonts/ClashDisplay-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Excon";src:url(../assets/fonts/Excon-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Excon";src:url(../assets/fonts/Excon-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+body{margin:0;background:#0F0D0C}
+a{color:#F3EEE7}a:hover{color:#B9A6FF}
+
+/* — ARIS ID : finitions & mouvement — */
+:root{--ease-out:cubic-bezier(0.23,1,0.32,1);--ease-io:cubic-bezier(0.77,0,0.175,1)}
+body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+h1,h2{text-wrap:balance}p,blockquote{text-wrap:pretty}
+::selection{background:#5B2EFF;color:#FFFFFF}
+a{transition:color 150ms ease}
+:focus-visible{outline:2px solid #AD96FF;outline-offset:3px;border-radius:2px}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #AD96FF;outline-offset:1px;border-color:transparent}
+a[style*="height: 56px"],a[style*="height: 52px"],button[type="submit"]{transition:transform 160ms var(--ease-out),filter 160ms ease}
+a[style*="height: 56px"]:active,a[style*="height: 52px"]:active,button[type="submit"]:active{transform:scale(0.97)}
+label[style*="height: 44px"],button[aria-pressed]{transition:border-color 150ms ease,transform 160ms var(--ease-out)}
+label[style*="height: 44px"]:active,button[aria-pressed]:active{transform:scale(0.97)}
+.ph{display:block;overflow:hidden;border-radius:4px}
+.ph img{transition:transform 600ms var(--ease-out)}
+@media (hover:hover) and (pointer:fine){
+a[style*="height: 56px"]:hover,a[style*="height: 52px"]:hover,button[type="submit"]:hover{filter:brightness(1.12)}
+a:hover .ph img{transform:scale(1.03)}
+label[style*="height: 44px"]:hover,button[aria-pressed]:hover{border-color:rgba(243,238,231,0.4)}
+}
+.h-img{animation:h-img 1100ms var(--ease-out) both;animation-delay:var(--d,0ms)}
+.h-in{animation:h-in 700ms var(--ease-out) both;animation-delay:var(--d,0ms)}
+.h-fade{animation:h-fade 500ms ease-out both;animation-delay:var(--d,0ms)}
+.draw path{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 650ms var(--ease-io) 650ms forwards}
+.draw path+path{animation-delay:1200ms;animation-duration:220ms;animation-timing-function:var(--ease-out)}
+@keyframes h-img{from{opacity:0;transform:scale(1.04)}}
+@keyframes h-in{from{opacity:0;transform:translateY(var(--y,16px))}}
+@keyframes h-fade{from{opacity:0}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes rv{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@supports (animation-timeline: view()){
+@media (prefers-reduced-motion: no-preference){
+section:not(.hero) h2,.ph,img[style*="aspect-ratio"]:not(.ph img),div[style*="aspect-ratio"],div[style*="height: 220px"],figure{animation:rv var(--ease-out) both;animation-timeline:view();animation-range:entry 0% entry 55%}
+}
+}
+@media (prefers-reduced-motion: reduce){
+.h-img,.h-in{animation-name:h-fade;animation-duration:400ms}
+.draw path{animation:none;stroke-dashoffset:0}
+.ph img,a[style*="height: 56px"],a[style*="height: 52px"],button[type="submit"]{transition:none}
+}
+
+/* — Mobile & robustesse — */
+html{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
+a,button,summary,label{touch-action:manipulation}
+button,summary,label[style*="height: 44px"],a[style*="height: 56px"],a[style*="height: 52px"]{-webkit-user-select:none;user-select:none}
+dd a,a[href^="mailto:"]{overflow-wrap:anywhere}
+a[style*="gap: 20px"] > span:last-child{flex-wrap:wrap;row-gap:4px}
+.mnav{display:none;position:relative}
+.mnav summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;height:44px;padding:0 4px;font:500 15px 'Excon',sans-serif;color:#F3EEE7}
+.mnav summary::-webkit-details-marker{display:none}
+.mnav-panel{position:absolute;right:0;top:50px;z-index:20;min-width:220px;display:flex;flex-direction:column;padding:8px;background:#171412;border:1px solid rgba(243,238,231,0.14);border-radius:6px;transform-origin:top right;animation:pop 180ms var(--ease-out)}
+.mnav-panel a{display:block;padding:12px 14px;font-size:17px;text-decoration:none;border-radius:4px}
+@keyframes pop{from{opacity:0;transform:scale(0.97)}}
+@media (pointer:coarse){footer a{display:inline-block;padding-block:10px}}
+@media (max-width:720px){
+header nav[aria-label="Navigation principale"]{display:none!important}
+.mnav{display:block}
+header{height:64px!important;flex-wrap:nowrap!important}
+header > a img{width:84px!important}
+.hero{height:auto!important}
+.hero > img.h-img{position:relative!important;inset:auto!important;height:540px!important;display:block}
+.hero-copy{position:relative!important;left:auto!important;right:auto!important;bottom:auto!important;padding:32px 20px 72px}
+.hero-label{display:none!important}
+.hero-name{top:560px!important;right:auto!important;left:20px}
+.hero-name svg{transform:scaleY(-1);width:64px;height:40px}
+.hero-copy{padding-top:120px!important}
+section[style*="padding: 160px"]{padding-top:96px!important}
+section[style*="padding: 128px"]{padding-top:80px!important}
+}
+span[style*="font-size: 56px"],span[style*="font-size: 64px"]{white-space:nowrap}
+@media (max-width:420px){span[style*="font-size: 56px"],span[style*="font-size: 64px"]{font-size:44px!important}}
+@media (prefers-reduced-motion: reduce){.mnav-panel{animation:none}}
+
+/* — Verre (glass) — */
+.glass{background:rgba(22,19,28,0.52);-webkit-backdrop-filter:blur(18px) saturate(150%);backdrop-filter:blur(18px) saturate(150%);border:1px solid rgba(243,238,231,0.14);box-shadow:inset 0 1px 0 rgba(255,255,255,0.07)}
+header:not([style*="position: absolute"]){position:sticky;top:0;z-index:30}
+header nav[aria-label="Navigation principale"]{gap:2px!important;padding:6px;border-radius:999px;background:rgba(22,19,28,0.52);-webkit-backdrop-filter:blur(18px) saturate(150%);backdrop-filter:blur(18px) saturate(150%);border:1px solid rgba(243,238,231,0.14);box-shadow:inset 0 1px 0 rgba(255,255,255,0.07)}
+header nav[aria-label="Navigation principale"] a{padding:10px 18px;border-radius:999px;text-decoration:none!important;transition:background 150ms ease,color 150ms ease}
+header nav[aria-label="Navigation principale"] a[aria-current="page"]{background:rgba(243,238,231,0.12)}
+@media (hover:hover) and (pointer:fine){header nav[aria-label="Navigation principale"] a:hover{background:rgba(243,238,231,0.07);color:#F3EEE7}}
+.mnav summary{padding:0 16px;border-radius:999px;background:rgba(22,19,28,0.52);-webkit-backdrop-filter:blur(18px) saturate(150%);backdrop-filter:blur(18px) saturate(150%);border:1px solid rgba(243,238,231,0.14)}
+.mnav-panel{background:rgba(22,19,28,0.62)!important;-webkit-backdrop-filter:blur(22px) saturate(150%);backdrop-filter:blur(22px) saturate(150%);border-radius:14px!important}
+header:not([style*="position: absolute"]) > a:first-child{padding:12px 18px;border-radius:999px;background:rgba(22,19,28,0.52);-webkit-backdrop-filter:blur(18px) saturate(150%);backdrop-filter:blur(18px) saturate(150%);border:1px solid rgba(243,238,231,0.14)}
+@media (max-width:720px){header:not([style*="position: absolute"]) > a:first-child{padding:8px 14px}}
+.ph{position:relative}
+.ph::after{content:"Voir le projet  ↗";position:absolute;left:16px;bottom:16px;padding:10px 16px;border-radius:999px;font:500 14px 'Excon',sans-serif;color:#F3EEE7;background:rgba(22,19,28,0.45);-webkit-backdrop-filter:blur(16px) saturate(150%);backdrop-filter:blur(16px) saturate(150%);border:1px solid rgba(243,238,231,0.18);opacity:0;transform:translateY(6px);transition:opacity 200ms ease,transform 300ms var(--ease-out);pointer-events:none}
+a[href="#"] .ph::after{content:"Bientôt"}
+@media (hover:hover) and (pointer:fine){a:hover .ph::after{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.ph::after{transition:opacity 150ms ease;transform:none}}
+</style>
+</head>
+<body>
+<div style="background: #0F0D0C; color: #F3EEE7; font-family: 'Excon', sans-serif; width: 100%">
+
+  <header style="max-width: 1440px; margin: 0 auto; height: 88px; box-sizing: border-box; padding: 0 clamp(20px, 4.5vw, 64px); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+    <a href="accueil.html" aria-label="ARIS ID Studio, accueil" style="display: flex"><img src="../assets/images/logo.png" alt="ARIS ID Studio" style="width: 104px; height: auto"></a>
+    <nav aria-label="Navigation principale" style="display: flex; gap: clamp(20px, 2.8vw, 40px); font-size: 15px; font-weight: 500; flex-wrap: wrap">
+      <a href="projets.html" style="text-decoration: none">Projets</a>
+      <a href="services.html" style="text-decoration: none">Services</a>
+      <a href="a-propos.html" style="text-decoration: none">À propos</a>
+      <a href="contact.html" style="text-decoration: none">Contact</a>
+    </nav>
+    <details class="mnav">
+      <summary>Menu <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h16M4 16h16"></path></svg></summary>
+      <nav aria-label="Navigation mobile" class="mnav-panel">
+        <a href="projets.html">Projets</a>
+        <a href="services.html">Services</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </details>
+  </header>
+
+  <!-- EN-TÊTE PROJET -->
+  <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 72px clamp(20px, 4.5vw, 64px) 56px">
+    <a href="projets.html" style="display: inline-flex; align-items: center; gap: 10px; font-size: 14px; color: #A39B91; text-decoration: none">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>
+      Tous les projets
+    </a>
+    <h1 class="h-in" style="--d: 0ms; --y: 24px; margin: 32px 0 0; font-family: 'Clash Display', sans-serif; font-weight: 500; font-size: clamp(52px, 9vw, 144px); line-height: 0.92; letter-spacing: -0.03em">Morwen Automobile</h1>
+    <dl style="margin: 56px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 32px; padding-top: 28px; border-top: 1px solid rgba(243,238,231,0.12)">
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <dt style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #A39B91">Discipline</dt>
+        <dd style="margin: 0; font-size: 17px">Identité de marque</dd>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <dt style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #A39B91">Secteur</dt>
+        <dd style="margin: 0; font-size: 17px">Automobile</dd>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <dt style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #A39B91">Livrables</dt>
+        <dd style="margin: 0; font-size: 17px">Logo, couleurs, papeterie, campagne</dd>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <dt style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #A39B91">Année</dt>
+        <dd style="margin: 0; font-size: 17px">[Année]</dd>
+      </div>
+    </dl>
+  </section>
+
+  <div style="position: relative">
+  <img class="h-img" src="../assets/images/mw-hero.webp" alt="Logo Morwen embossé sur coffret noir, cartes et signalétique, devant une voiture aux feux rouges" style="--d: 200ms; display: block; width: 100%; height: clamp(320px, 52vw, 760px); object-fit: cover">
+  <span class="glass h-fade" style="--d: 700ms; position: absolute; left: clamp(20px, 4.5vw, 64px); bottom: clamp(20px, 3vw, 40px); display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 999px; font-size: 15px; font-weight: 500; color: #F3EEE7"><span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: #AD96FF"></span>Identité de marque</span>
+  </div>
+
+  <!-- CONTEXTE -->
+  <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 128px clamp(20px, 4.5vw, 64px) 0">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 64px">
+      <h2 style="margin: 0; font-family: 'Clash Display', sans-serif; font-weight: 500; font-size: clamp(32px, 3.6vw, 52px); line-height: 1.05; letter-spacing: -0.02em">Une marque automobile qui devait paraître aussi silencieuse et précise que ses voitures.</h2>
+      <div style="display: flex; flex-direction: column; gap: 32px">
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <h3 style="margin: 0; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #A39B91">Le contexte</h3>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #C9C1B7">[Qui est Morwen, ce qu'ils lancent, et pourquoi ils avaient besoin d'une nouvelle identité.]</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <h3 style="margin: 0; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #A39B91">L'approche</h3>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #C9C1B7">[Les choix clés : le symbole en lignes continues, le duo tomate et prune, le ton noir et lumière rouge de la campagne.]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGO -->
+  <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 128px clamp(20px, 4.5vw, 64px) 0">
+    <span style="display: block; margin-bottom: 24px; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #A39B91">Logo</span>
+    <img src="../assets/images/mw-logo.webp" alt="Logo Morwen Automobile en tomate sur fond noir" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 4px; background: #000000">
+  </section>
+
+  <!-- COULEURS -->
+  <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 96px clamp(20px, 4.5vw, 64px) 0">
+    <span style="display: block; margin-bottom: 24px; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #A39B91">Couleurs</span>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px">
+      <div style="height: 220px; box-sizing: border-box; padding: 20px; border-radius: 4px; background: #F95959; color: #1A0A0A; display: flex; flex-direction: column; justify-content: flex-end; gap: 4px">
+        <span style="font-size: 17px; font-weight: 500">Tomate</span><span style="font-size: 14px">#F95959</span>
+      </div>
+      <div style="height: 220px; box-sizing: border-box; padding: 20px; border-radius: 4px; background: #920E4D; color: #FFFFFF; display: flex; flex-direction: column; justify-content: flex-end; gap: 4px">
+        <span style="font-size: 17px; font-weight: 500">Prune</span><span style="font-size: 14px">#920E4D</span>
+      </div>
+      <div style="height: 220px; box-sizing: border-box; padding: 20px; border-radius: 4px; background: #000000; border: 1px solid rgba(243,238,231,0.16); color: #FFFFFF; display: flex; flex-direction: column; justify-content: flex-end; gap: 4px">
+        <span style="font-size: 17px; font-weight: 500">Noir</span><span style="font-size: 14px">#000000</span>
+      </div>
+      <div style="height: 220px; box-sizing: border-box; padding: 20px; border-radius: 4px; background: #FFFFFF; color: #0F0D0C; display: flex; flex-direction: column; justify-content: flex-end; gap: 4px">
+        <span style="font-size: 17px; font-weight: 500">Blanc</span><span style="font-size: 14px">#FFFFFF</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- DÉCLINAISONS -->
+  <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 96px clamp(20px, 4.5vw, 64px) 0">
+    <span style="display: block; margin-bottom: 24px; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #A39B91">Déclinaisons</span>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 16px">
+      <img src="../assets/images/mw-tomato.webp" alt="Logo Morwen blanc sur fond tomate à motifs" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px">
+      <img src="../assets/images/mw-plum.webp" alt="Logo Morwen blanc sur fond prune à motifs" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px">
+    </div>
+  </section>
+
+  <!-- CAMPAGNE -->
+  <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 128px clamp(20px, 4.5vw, 64px) 0">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 40px">
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <span style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #A39B91">Campagne</span>
+        <p style="margin: 0; max-width: 760px; font-family: 'Clash Display', sans-serif; font-weight: 500; font-size: clamp(32px, 3.6vw, 52px); line-height: 1.05; letter-spacing: -0.02em">« Ce n'est pas une évolution. C'est Morwen. »</p>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px">
+      <img src="../assets/images/mw-campagne-1.webp" alt="Affiche Ce n'est pas une évolution, c'est Morwen" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px">
+      <img src="../assets/images/mw-campagne-2.webp" alt="Affiche Le futur a une nouvelle signature" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px">
+      <img src="../assets/images/mw-campagne-3.webp" alt="Affiche La performance sans bruit" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px">
+      <img src="../assets/images/mw-campagne-4.webp" alt="Affiche L'avenir en toute sophistication" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px">
+    </div>
+  </section>
+
+  <!-- SUITE -->
+  <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 160px clamp(20px, 4.5vw, 64px) 128px">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 32px; padding-top: 48px; border-top: 1px solid rgba(243,238,231,0.12)">
+      <a href="projet-tictac.html" style="display: flex; flex-direction: column; gap: 20px; text-decoration: none; color: #F3EEE7">
+        <span style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #A39B91">Projet suivant</span>
+        <span class="ph"><img src="../assets/images/proj-tictac.webp" alt="Enseigne Tic Tac sur une façade" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 4px; display: block"></span>
+        <span style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px">
+          <span style="font-family: 'Clash Display', sans-serif; font-weight: 500; font-size: 32px; letter-spacing: -0.01em">Tic Tac</span>
+          <span style="font-size: 14px; color: #A39B91">Identité visuelle</span>
+        </span>
+      </a>
+      <div style="display: flex; flex-direction: column; justify-content: flex-end; gap: 24px">
+        <h2 style="margin: 0; font-family: 'Clash Display', sans-serif; font-weight: 500; font-size: clamp(40px, 5vw, 72px); line-height: 0.98; letter-spacing: -0.025em">Un projet de ce type ?</h2>
+        <p style="margin: 0; max-width: 420px; font-size: 17px; line-height: 1.55; color: #C9C1B7">Parlez-moi de votre marque, je vous réponds avec une première approche.</p>
+        <a href="contact.html" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; height: 56px; padding: 0 28px; border-radius: 4px; background: #5B2EFF; color: #FFFFFF; font-size: 16px; font-weight: 500; text-decoration: none">Démarrer un projet
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid rgba(243,238,231,0.12)">
+    <div style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 48px clamp(20px, 4.5vw, 64px); display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap">
+      <img src="../assets/images/logo.png" alt="ARIS ID Studio" style="width: 96px; height: auto">
+      <nav aria-label="Pied de page" style="display: flex; gap: 32px; font-size: 15px; flex-wrap: wrap">
+        <a href="projets.html" style="text-decoration: none">Projets</a>
+        <a href="services.html" style="text-decoration: none">Services</a>
+        <a href="a-propos.html" style="text-decoration: none">À propos</a>
+        <a href="contact.html" style="text-decoration: none">Contact</a>
+      </nav>
+      <div style="display: flex; gap: 24px; font-size: 15px; flex-wrap: wrap">
+        <a href="https://www.instagram.com/arisid_studio" style="text-decoration: none">Instagram</a>
+        <a href="https://www.linkedin.com/in/lut%C3%A9cia-rustico-011064213/" style="text-decoration: none">LinkedIn</a>
+        <a href="https://www.facebook.com/share/1AoGoDNwTp/" style="text-decoration: none">Facebook</a>
+      </div>
+    </div>
+    <div style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 0 clamp(20px, 4.5vw, 64px) 40px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13px; color: #A39B91">
+      <span>© 2026 ARIS ID Studio</span>
+      <a href="#" style="color: #A39B91; text-decoration: none">Mentions légales &amp; CGV</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

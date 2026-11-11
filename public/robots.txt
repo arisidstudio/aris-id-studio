@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /offres
+Disallow: /parcours
+
+Sitemap: https://www.arisidstudio.com/sitemap.xml

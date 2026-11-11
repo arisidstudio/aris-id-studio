@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Métadonnées macOS (disques externes) et réglages locaux
+._*
+.DS_Store
+.claude/settings.local.json
