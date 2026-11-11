@@ -17,7 +17,7 @@ const plainLink = { color: 'var(--text)', textDecoration: 'none' };
 export default function Contact() {
   return (
     <div style={{ color: 'var(--text)' }}>
-      <Seo title="Contact · ARIS ID Studio" description="Parlez-moi de votre projet : je vous réponds avec une première proposition d'approche." path="/contact" />
+      <Seo title="Contact · ARIS ID Studio" description="Parlez-moi de votre projet : je vous réponds avec une première proposition d'approche." path="/contact" />
       <section className="pad-top-page" style={{ position: 'relative', maxWidth: '1440px', margin: '0 auto', paddingLeft: GUTTER, paddingRight: GUTTER, paddingBottom: '128px' }}>
         <img className="h-fade ct-bg" src="/images/hero-glass.webp" srcSet="/images/hero-glass-828.webp 828w, /images/hero-glass-1280.webp 1280w, /images/hero-glass-1920.webp 1920w, /images/hero-glass.webp 2880w" sizes="(max-width: 1000px) 100vw, 72vw" alt="" aria-hidden="true" width="2880" height="1800" style={{ '--d': '150ms' }} />
 
@@ -28,7 +28,7 @@ export default function Contact() {
               Parlons de votre projet.
             </h1>
             <p style={{ margin: 0, maxWidth: '440px', fontSize: '17px', lineHeight: 1.6, color: 'var(--text-2)' }}>
-              Remplissez le brief en deux minutes. Je vous réponds sous 24 h avec une première proposition d'approche.
+              Remplissez le brief en deux minutes. Je vous réponds sous 24 h avec une première proposition d'approche.
             </p>
             <dl style={{ margin: '24px 0 0', display: 'flex', flexDirection: 'column', borderTop: '1px solid var(--line)' }}>
               <div style={row}>

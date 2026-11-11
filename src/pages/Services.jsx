@@ -34,7 +34,7 @@ function ServiceImage({ image }) {
       height={image.height}
       loading="lazy"
       decoding="async"
-      style={{ display: 'block', width: '100%', height: 'auto', aspectRatio: '4 / 3', objectFit: 'cover', borderRadius: '4px' }}
+      style={{ display: 'block', width: '100%', height: 'auto', aspectRatio: image.ratio.replace('/', ' / '), objectFit: 'cover', borderRadius: '4px' }}
     />
   );
 }
@@ -87,7 +87,7 @@ export default function Services() {
 
       <section className="pad-160" style={{ ...container, paddingBottom: '128px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: '32px', flexWrap: 'wrap', paddingTop: '48px', borderTop: '1px solid var(--line)' }}>
-          <h2 className="display reveal" style={{ margin: 0, maxWidth: '760px', fontSize: 'clamp(40px, 5vw, 72px)', lineHeight: 0.98, letterSpacing: '-0.025em' }}>Un besoin précis ? Parlons-en.</h2>
+          <h2 className="display reveal" style={{ margin: 0, maxWidth: '760px', fontSize: 'clamp(40px, 5vw, 72px)', lineHeight: 0.98, letterSpacing: '-0.025em' }}>Un besoin précis ? Parlons-en.</h2>
           <Link to="/contact" className="btn">
             Démarrer un projet
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>

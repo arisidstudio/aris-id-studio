@@ -7,7 +7,7 @@ export const PROCESS_STEPS = [
   {
     num: "R",
     title: "Régler",
-    desc: "Régler finement la forme. Grilles, typographie, rythme : j'ajuste chaque détail pour une harmonie parfaite."
+    desc: "Régler finement la forme. Grilles, typographie, rythme : j'ajuste chaque détail pour une harmonie parfaite."
   },
   {
     num: "I",

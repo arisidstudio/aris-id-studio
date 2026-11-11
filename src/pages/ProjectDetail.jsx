@@ -205,7 +205,7 @@ export default function ProjectDetail() {
             />
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', gap: '24px', minWidth: 0 }}>
-            <h2 className="display reveal" style={{ margin: 0, fontSize: 'clamp(40px, 5vw, 72px)', lineHeight: 0.98, letterSpacing: '-0.025em' }}>Un projet de ce type ?</h2>
+            <h2 className="display reveal" style={{ margin: 0, fontSize: 'clamp(40px, 5vw, 72px)', lineHeight: 0.98, letterSpacing: '-0.025em' }}>Un projet de ce type ?</h2>
             <p style={{ margin: 0, maxWidth: '420px', fontSize: '17px', lineHeight: 1.55, color: 'var(--text-2)' }}>
               Parlez-moi de votre marque, je vous réponds avec une première approche.
             </p>

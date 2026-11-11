@@ -26,7 +26,7 @@ export const TESTIMONIALS = [
     company: "Branding for All",
     highlight: "Du 10/10, je la recommande sans hésiter.",
     accent: "Du 10/10,",
-    text: "J'ai collaboré avec Lutecia sur plusieurs projets IA et design : créative, réactive et investie à 100%, elle aborde chaque projet avec sérieux et professionnalisme. Le résultat est toujours propre, de qualité, et à la hauteur des attentes. Du 10/10, je la recommande sans hésiter.",
+    text: "J'ai collaboré avec Lutecia sur plusieurs projets IA et design : créative, réactive et investie à 100%, elle aborde chaque projet avec sérieux et professionnalisme. Le résultat est toujours propre, de qualité, et à la hauteur des attentes. Du 10/10, je la recommande sans hésiter.",
     image: "/images/tm-marion.webp"
   }
 ];

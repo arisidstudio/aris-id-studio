@@ -36,10 +36,10 @@ export default function About() {
             <span className="eyebrow">À propos</span>
             <h1 className="display h-in" style={{ '--d': '0ms', '--y': '24px', margin: 0, fontSize: 'clamp(52px, 7vw, 112px)', lineHeight: 0.92, letterSpacing: '-0.03em' }}>Lutécia Rustico</h1>
             <p style={{ margin: 0, fontSize: '19px', lineHeight: 1.55 }}>
-              ARIS ID est né d'une conviction simple : une identité juste ne se crée pas dans l'urgence.
+              ARIS ID est né d'une conviction simple : une identité juste ne se crée pas dans l'urgence.
             </p>
             <p style={{ margin: 0, maxWidth: '520px', fontSize: '17px', lineHeight: 1.6, color: 'var(--text-2)' }}>
-              Graphiste et directrice artistique, basée à Nice. Je ne crée pas de logos : je crée une histoire autour de votre marque, puis je la rends visible partout, du logo aux maquettes, des photos aux réseaux.
+              Graphiste et directrice artistique, basée à Nice. Je ne crée pas de logos : je crée une histoire autour de votre marque, puis je la rends visible partout, du logo aux maquettes, des photos aux réseaux.
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '32px', marginTop: '16px', paddingTop: '28px', borderTop: '1px solid var(--line)' }}>
               {STATS.map((s) => (
@@ -55,7 +55,7 @@ export default function About() {
 
       <section className="pad-160" style={container}>
         <p className="display reveal" style={{ margin: 0, maxWidth: '1100px', fontSize: 'clamp(36px, 5vw, 76px)', lineHeight: 1.02, letterSpacing: '-0.025em', textWrap: 'balance' }}>
-          « Ici, la création n'est jamais décorative. Elle est <span style={{ color: 'var(--accent-soft)' }}>ancrée, réglée, pensée.</span> »
+          « Ici, la création n'est jamais décorative. Elle est <span style={{ color: 'var(--accent-soft)' }}>ancrée, réglée, pensée.</span> »
         </p>
       </section>
 

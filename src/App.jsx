@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Head } from 'vite-react-ssg';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -7,11 +7,18 @@ import { CreativeBackground } from './components/CreativeBackground';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
+  const previousPath = useRef(pathname);
   useEffect(() => {
     const target = hash && document.getElementById(decodeURIComponent(hash.slice(1)));
     if (target) target.scrollIntoView();
     else window.scrollTo(0, 0);
   }, [pathname, hash]);
+  // After a page change, move focus off the clicked nav link and onto the new content.
+  useEffect(() => {
+    if (previousPath.current === pathname) return;
+    previousPath.current = pathname;
+    document.getElementById('contenu')?.focus({ preventScroll: true });
+  }, [pathname]);
   return null;
 }
 

@@ -32,7 +32,7 @@ const BASE_PROJECTS = [
     year: "2026",
     role: "Brand Designer & DA",
     client: "MORWEN AUTOMOBILE",
-    description: "MORWEN Automobile est une vision futuriste de l'automobile premium, pensée comme une rencontre entre puissance, précision et émotion. Imaginée comme une marque au design silencieux mais affirmé, MORWEN explore une nouvelle façon de percevoir la performance : plus fluide, plus minimaliste, plus instinctive. À travers une direction artistique sombre et cinématique, ce projet construit un univers visuel capable d'incarner l'élégance technologique et la présence d'une marque automobile de nouvelle génération.\n\nL'objectif était de créer une identité forte, crédible et immédiatement reconnaissable, capable de vivre sur différents supports : campagnes visuelles, affiches, motion design, branding et concept automobile. Chaque visuel a été conçu pour transmettre une sensation de mouvement, de mystère et de maîtrise, tout en installant une esthétique premium inspirée des codes du luxe et du futur.",
+    description: "MORWEN Automobile est une vision futuriste de l'automobile premium, pensée comme une rencontre entre puissance, précision et émotion. Imaginée comme une marque au design silencieux mais affirmé, MORWEN explore une nouvelle façon de percevoir la performance : plus fluide, plus minimaliste, plus instinctive. À travers une direction artistique sombre et cinématique, ce projet construit un univers visuel capable d'incarner l'élégance technologique et la présence d'une marque automobile de nouvelle génération.\n\nL'objectif était de créer une identité forte, crédible et immédiatement reconnaissable, capable de vivre sur différents supports : campagnes visuelles, affiches, motion design, branding et concept automobile. Chaque visuel a été conçu pour transmettre une sensation de mouvement, de mystère et de maîtrise, tout en installant une esthétique premium inspirée des codes du luxe et du futur.",
     content: [
       { type: 'image', url: '/images/projets/morwen-automobile/MORWEN_Primary_Color_2.webp' },
       { type: 'image', url: '/images/projets/morwen-automobile/MORWEN_Primary_Tomato.webp' },
@@ -85,7 +85,7 @@ const BASE_PROJECTS = [
     image: "/images/projets/football-cover/Foot-design-1.webp",
     year: "2025",
     role: "Design d'affiches sportives",
-    description: "Ce projet explore le football comme un terrain d'expression visuelle et émotionnelle, au-delà du simple résultat sportif. Chaque visuel est pensé comme une affiche iconique, mettant en scène des joueurs majeurs du football contemporain à travers une direction artistique forte, immersive et assumée. L'objectif est de transformer le joueur en symbole : une figure de puissance, de jeunesse, de tension et d'explosivité. Les compositions jouent avec la couleur, la typographie, la superposition d'images et les textures graphiques pour créer des visuels percutants, immédiatement identifiables et conçus pour capter l'attention sur tous les supports digitaux et print. Le défi de ce projet réside dans l'équilibre entre performance sportive et narration visuelle. Chaque affiche raconte un moment, une attitude ou une énergie propre au joueur représenté, tout en respectant l'identité du club et l'univers du football moderne. Ce travail m'a permis d'affirmer un langage graphique orienté sport, d'expérimenter des compositions audacieuses et de concevoir des visuels pensés comme des objets de communication à forte valeur émotionnelle.",
+    description: "Ce projet explore le football comme un terrain d'expression visuelle et émotionnelle, au-delà du simple résultat sportif. Chaque visuel est pensé comme une affiche iconique, mettant en scène des joueurs majeurs du football contemporain à travers une direction artistique forte, immersive et assumée. L'objectif est de transformer le joueur en symbole : une figure de puissance, de jeunesse, de tension et d'explosivité. Les compositions jouent avec la couleur, la typographie, la superposition d'images et les textures graphiques pour créer des visuels percutants, immédiatement identifiables et conçus pour capter l'attention sur tous les supports digitaux et print. Le défi de ce projet réside dans l'équilibre entre performance sportive et narration visuelle. Chaque affiche raconte un moment, une attitude ou une énergie propre au joueur représenté, tout en respectant l'identité du club et l'univers du football moderne. Ce travail m'a permis d'affirmer un langage graphique orienté sport, d'expérimenter des compositions audacieuses et de concevoir des visuels pensés comme des objets de communication à forte valeur émotionnelle.",
     content: [
       { type: 'image', url: '/images/projets/football-cover/Foot-design-1.webp' },
       { type: 'image', url: '/images/projets/football-cover/Foot-design-2.webp' },
@@ -103,7 +103,7 @@ const BASE_PROJECTS = [
     image: "/images/projets/tic-tac/Tic-tac-logo-1.webp",
     year: "2025",
     role: "Direction artistique & Brand designer",
-    description: "Tic&Tac est un duo créatif formé pour rendre le design plus accessible, plus fun et plus impactant. Ce projet de branding vise à capturer l'essence de cette complicité créative à travers une identité visuelle pétillante, jeune et mémorable. L'objectif du projet est de concevoir une identité visuelle complète pour une micro-agence créative, incarnant l'esprit de collaboration, d'énergie positive et de vision partagée. Créer un univers graphique cohérent, adaptable sur tous supports : digital, print, social media, goodies. Ce projet m'a permis de développer ma capacité à créer une marque à deux voix, en traduisant visuellement une énergie partagée et une synergie créative.",
+    description: "Tic&Tac est un duo créatif formé pour rendre le design plus accessible, plus fun et plus impactant. Ce projet de branding vise à capturer l'essence de cette complicité créative à travers une identité visuelle pétillante, jeune et mémorable. L'objectif du projet est de concevoir une identité visuelle complète pour une micro-agence créative, incarnant l'esprit de collaboration, d'énergie positive et de vision partagée. Créer un univers graphique cohérent, adaptable sur tous supports : digital, print, social media, goodies. Ce projet m'a permis de développer ma capacité à créer une marque à deux voix, en traduisant visuellement une énergie partagée et une synergie créative.",
     content: [
       { type: 'image', url: '/images/projets/tic-tac/Tic-tac-logo-1.webp' },
       { type: 'image', url: '/images/projets/tic-tac/Tic-tac-logo-papier.webp' },
@@ -212,11 +212,11 @@ const EXTRAS = {
       img('/images/projets/no-mag/No-Mag-Tech_4.webp', 'Page éditoriale Break News avec un portrait en effet de balayage numérique bleu', 4501, 5626),
       img('/images/projets/no-mag/No-Mag-Tech_5.webp', 'Palette de couleurs et déclinaisons du logo No mag-tech en trois bleus', 4501, 5625),
       img('/images/projets/no-mag/No-Mag-Tech_6.webp', 'Logo No mag-tech bleu sur fond turquoise à motif damier', 4501, 5626),
-      img('/images/projets/no-mag/No-Mag-Tech_7.webp', 'Planche typographique No mag-tech : Neue Haas Grotesk Display Pro', 4501, 5626),
+      img('/images/projets/no-mag/No-Mag-Tech_7.webp', 'Planche typographique No mag-tech : Neue Haas Grotesk Display Pro', 4501, 5626),
       img('/images/projets/no-mag/No-Mag-Tech_8.webp', 'Page éditoriale Break News avec un buste en lignes lumineuses bleues', 4501, 5625),
       img('/images/projets/no-mag/No-Mag-Tech_9.webp', 'Site No mag-tech affiché sur un smartphone', 4501, 5626),
       img('/images/projets/no-mag/No-Mag-Tech_10.webp', 'Façade de bâtiment et enseigne lumineuse aux couleurs No mag-tech', 4500, 5626),
-      img('/images/projets/no-mag/No-Mag-Tech_11.webp', 'Goodies No mag-tech : tote bag, cartes de visite, sac à dos et porte-clés', 4500, 5625),
+      img('/images/projets/no-mag/No-Mag-Tech_11.webp', 'Goodies No mag-tech : tote bag, cartes de visite, sac à dos et porte-clés', 4500, 5625),
       img('/images/projets/no-mag/No-Mag-Tech_12.webp', "Stand d'exposition et bureaux aux couleurs No mag-tech", 4500, 5626),
     ]),
   },
@@ -243,7 +243,7 @@ const EXTRAS = {
         img('/images/mw-tomato.webp', 'Logo Morwen blanc sur fond tomate à motifs', 1100, 1375, '4/5'),
         img('/images/mw-plum.webp', 'Logo Morwen blanc sur fond prune à motifs', 1100, 1375, '4/5'),
       ] },
-      { label: 'Campagne', layout: 'cols-4', quote: '« Ce n\'est pas une évolution. C\'est Morwen. »', images: [
+      { label: 'Campagne', layout: 'cols-4', quote: '« Ce n\'est pas une évolution. C\'est Morwen. »', images: [
         img('/images/mw-campagne-1.webp', "Affiche Ce n'est pas une évolution, c'est Morwen", 900, 1125, '4/5'),
         img('/images/mw-campagne-2.webp', 'Affiche Le futur a une nouvelle signature', 900, 1125, '4/5'),
         img('/images/mw-campagne-3.webp', 'Affiche La performance sans bruit', 900, 1125, '4/5'),
@@ -258,7 +258,7 @@ const EXTRAS = {
     deliverables: 'Logo, couleurs, typographies, motifs, papeterie, réseaux sociaux',
     cover: img('/images/proj-tictac.webp', 'Enseigne Tic Tac sur une façade', 900, 640),
     hero: img('/images/tt-hero.webp', 'Enseigne Tic Tac violette accrochée à une façade en ville', 2400, 1280),
-    tagline: "Une identité qui joue, à l'image de sa promesse : créer, surprendre, impacter.",
+    tagline: "Une identité qui joue, à l'image de sa promesse : créer, surprendre, impacter.",
     colors: [
       { name: 'Violet', hex: '#77016F' },
       { name: 'Corail', hex: '#ED7668' },
@@ -270,9 +270,9 @@ const EXTRAS = {
         img('/images/tt-logo-2.webp', 'Logo Tic Tac noir et blanc sur fond corail', 1100, 1100, '1/1'),
       ] },
       { label: 'Typographies, motifs et slogan', layout: 'cols-3', images: [
-        img('/images/tt-typo.webp', 'Planche typographique Tic Tac : Super Woobly et Poppins', 1100, 1100, '1/1'),
+        img('/images/tt-typo.webp', 'Planche typographique Tic Tac : Super Woobly et Poppins', 1100, 1100, '1/1'),
         img('/images/tt-motifs.webp', 'Deux motifs ondulés Tic Tac en dégradé violet et corail', 1100, 1100, '1/1'),
-        img('/images/tt-slogan.webp', 'Slogan Tic Tac : Créer, Surprendre, Impacter', 1100, 1100, '1/1'),
+        img('/images/tt-slogan.webp', 'Slogan Tic Tac : Créer, Surprendre, Impacter', 1100, 1100, '1/1'),
       ] },
       { label: 'Papeterie', layout: 'feature', images: [
         img('/images/tt-papier.webp', 'Papier à en-tête et enveloppe Tic Tac', 1400, 996, '16/9'),
@@ -280,7 +280,7 @@ const EXTRAS = {
         img('/images/tt-logo-papier.webp', 'Logo Tic Tac imprimé sur papier avec un stylo', 1400, 985, '4/3'),
       ] },
       { label: 'Réseaux sociaux', layout: 'cols-3', images: [
-        img('/images/tt-post-1.webp', 'Publication Tic Tac : Tout commence par une feuille blanche', 900, 1125, '4/5'),
+        img('/images/tt-post-1.webp', 'Publication Tic Tac : Tout commence par une feuille blanche', 900, 1125, '4/5'),
         img('/images/tt-post-2.webp', 'Publication Tic Tac présentant une couverture de livre', 900, 1125, '4/5'),
         img('/images/tt-story.webp', 'Gabarit de story Tic Tac', 700, 1244, '4/5'),
       ] },
@@ -294,7 +294,7 @@ const EXTRAS = {
     deliverables: 'Logo, icône, couleurs, typographies, motif, goodies',
     cover: img('/images/proj-spicy.webp', "Bouteille Spicy 20's rouge avec le logo flamme", 900, 675),
     hero: img('/images/sp-hero.webp', "Deux t-shirts Spicy 20's sur cintres, logo flamme et slogan Let's make it spicy", 2400, 1350),
-    tagline: "Une flamme, du rouge, et une promesse simple : « Let's make it spicy! »",
+    tagline: "Une flamme, du rouge, et une promesse simple : « Let's make it spicy! »",
     colors: [
       { name: 'Rouge', hex: '#D00500' },
       { name: 'Framboise', hex: '#DF0C42' },

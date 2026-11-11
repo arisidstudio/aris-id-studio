@@ -40,7 +40,7 @@ const SERVICES = [
   },
   {
     name: 'Shooting Photo',
-    desc: 'Des photos qui ressemblent vraiment à votre marque : portraits, équipe, lieux et coulisses.',
+    desc: 'Des photos qui ressemblent vraiment à votre marque : portraits, équipe, lieux et coulisses.',
     deliverables: 'Portrait · Équipe · Lieux',
   },
   {
@@ -57,7 +57,7 @@ const ArrowRight = () => (
 export default function Home() {
   return (
     <div style={{ color: 'var(--text)', background: 'var(--bg)' }}>
-      <Seo title="ARIS ID Studio — Identité de marque, UI/UX et images · Lutécia Rustico" description="Studio de design de Lutécia Rustico à Nice : identité visuelle, maquettes d'interface, shooting photo et shooting produit avec l'IA pour startups, PME et marques lifestyle." path="/" jsonLd={JSON_LD} />
+      <Seo title="ARIS ID Studio — Identité de marque, UI/UX et images · Lutécia Rustico" description="Studio de design de Lutécia Rustico à Nice : identité visuelle, maquettes d'interface, shooting photo et shooting produit avec l'IA pour startups, PME et marques lifestyle." path="/" jsonLd={JSON_LD} />
       {/* HERO */}
       <section className="hero">
         <img
@@ -197,7 +197,7 @@ export default function Home() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', minWidth: 0 }}>
             <span className="eyebrow">À propos</span>
             <p className="display" style={{ margin: 0, fontSize: 'clamp(30px, 3.2vw, 46px)', lineHeight: 1.12, letterSpacing: '-0.015em', textWrap: 'pretty' }}>
-              Je cherche ce qui rend votre marque unique, puis je le rends visible partout : logo, maquettes, photos, réseaux.
+              Je cherche ce qui rend votre marque unique, puis je le rends visible partout : logo, maquettes, photos, réseaux.
             </p>
             <Link to="/a-propos" className="text-link" style={{ alignSelf: 'flex-start' }}>Mon parcours</Link>
           </div>
@@ -219,9 +219,9 @@ export default function Home() {
         <div style={{ ...twoCols, gap: '64px', paddingTop: '64px', borderTop: LINE }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', minWidth: 0 }}>
             <span className="eyebrow">Démarrer un projet</span>
-            <h2 className="display reveal" style={{ margin: 0, fontSize: 'clamp(40px, 5.6vw, 80px)', lineHeight: 0.98, letterSpacing: '-0.025em' }}>Un projet en tête ?</h2>
+            <h2 className="display reveal" style={{ margin: 0, fontSize: 'clamp(40px, 5.6vw, 80px)', lineHeight: 0.98, letterSpacing: '-0.025em' }}>Un projet en tête ?</h2>
             <p style={{ margin: 0, maxWidth: '420px', fontSize: '17px', lineHeight: 1.55, color: 'var(--text-2)' }}>
-              Décrivez-le en quelques lignes. Je vous réponds sous 24 h avec une première proposition d'approche.
+              Décrivez-le en quelques lignes. Je vous réponds sous 24 h avec une première proposition d'approche.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '16px', fontSize: '16px' }}>
               <a href="mailto:helloarisidstudio@gmail.com" className="text-link break-anywhere" style={{ alignSelf: 'flex-start', fontWeight: 400 }}>helloarisidstudio@gmail.com</a>

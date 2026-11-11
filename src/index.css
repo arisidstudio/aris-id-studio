@@ -216,8 +216,8 @@ html { scroll-padding-top: 88px; }
   text-decoration: none;
   transform: translateY(-200%);
 }
-.skip-link:focus { transform: none; }
-main:focus { outline: none; }
+.skip-link:focus-visible { transform: none; }
+main:focus-visible { outline: none; }
 
 /* Liens du panneau mobile */
 .mobile-nav-link {
