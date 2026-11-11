@@ -28,7 +28,7 @@ export default function Contact() {
               Parlons de votre projet.
             </h1>
             <p style={{ margin: 0, maxWidth: '440px', fontSize: '17px', lineHeight: 1.6, color: 'var(--text-2)' }}>
-              Remplissez le brief en deux minutes. Je vous réponds sous À REMPLIR (ex. « 48 h ») avec une première proposition d'approche.
+              Remplissez le brief en deux minutes. Je vous réponds sous 24 h avec une première proposition d'approche.
             </p>
             <dl style={{ margin: '24px 0 0', display: 'flex', flexDirection: 'column', borderTop: '1px solid var(--line)' }}>
               <div style={row}>

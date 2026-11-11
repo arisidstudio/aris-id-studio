@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 
 const BASE_TYPES = ['Branding & Identity', 'UI/UX Design', 'Shooting photo', 'Shooting produit IA'];
-const BUDGETS = ['À REMPLIR (ex. « Moins de 1 000 € / 1 000 – 3 000 € / Plus de 3 000 € »)'];
+const BUDGETS = ['Moins de 1 000 €', '1 000 – 3 000 €', 'Plus de 3 000 €'];
 const DELAYS = ["Moins d'un mois", '1 à 3 mois', 'Plus de 3 mois'];
 
 const twoCols = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '24px' };

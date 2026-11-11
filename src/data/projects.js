@@ -1,5 +1,29 @@
 const BASE_PROJECTS = [
   {
+    id: 8,
+    slug: 'no-mag',
+    title: "No Mag",
+    category: "Branding",
+    image: "/images/projets/no-mag/No_Mag-Tech_1.webp",
+    year: "2026",
+    role: "Brand Designer & DA",
+    description: "NO mag-tech est une entreprise tech à l'âme de magazine. Elle ne se contente pas de proposer des solutions technologiques, elle informe, analyse et raconte l'actualité tech à travers un regard éditorial assumé.\n\nL'objectif était de créer une identité qui porte ces deux univers sans les opposer. Une marque reconnaissable, ancrée dans le monde tech, mais qui refuse ses codes les plus attendus. Chaque décision visuelle, du logo \"no\" en italique bold au motif damier, a été pensée pour installer une présence forte et mémorable, sur tous les supports.",
+    content: [
+      { type: 'image', url: '/images/projets/no-mag/No_Mag-Tech_1.webp' },
+      { type: 'image', url: '/images/projets/no-mag/No-Mag-Tech_2.webp' },
+      { type: 'image', url: '/images/projets/no-mag/No-Mag-Tech_3.webp' },
+      { type: 'image', url: '/images/projets/no-mag/No-Mag-Tech_4.webp' },
+      { type: 'image', url: '/images/projets/no-mag/No-Mag-Tech_5.webp' },
+      { type: 'image', url: '/images/projets/no-mag/No-Mag-Tech_6.webp' },
+      { type: 'image', url: '/images/projets/no-mag/No-Mag-Tech_7.webp' },
+      { type: 'image', url: '/images/projets/no-mag/No-Mag-Tech_8.webp' },
+      { type: 'image', url: '/images/projets/no-mag/No-Mag-Tech_9.webp' },
+      { type: 'image', url: '/images/projets/no-mag/No-Mag-Tech_10.webp' },
+      { type: 'image', url: '/images/projets/no-mag/No-Mag-Tech_11.webp' },
+      { type: 'image', url: '/images/projets/no-mag/No-Mag-Tech_12.webp' }
+    ]
+  },
+  {
     id: 7,
     slug: 'morwen-automobile',
     title: "MORWEN AUTOMOBILE",
@@ -174,6 +198,28 @@ const img = (src, alt, width, height, ratio) => ({ src, alt, width, height, rati
 const visuals = (items) => [{ label: 'Visuels', layout: 'masonry', images: items }];
 
 const EXTRAS = {
+  'no-mag': {
+    displayTitle: 'No Mag',
+    discipline: 'Identité de marque',
+    services: ['branding'],
+    sector: 'Tech',
+    deliverables: '',
+    cover: img('/images/projets/no-mag/No_Mag-Tech_1.webp', 'Logo No mag-tech blanc sur fond bleu à motif damier', 4500, 5626),
+    sections: visuals([
+      img('/images/projets/no-mag/No_Mag-Tech_1.webp', 'Logo No mag-tech blanc sur fond bleu à motif damier', 4500, 5626),
+      img('/images/projets/no-mag/No-Mag-Tech_2.webp', 'Affiche Break News No mag-tech avec un visage portant une visière futuriste', 4500, 5625),
+      img('/images/projets/no-mag/No-Mag-Tech_3.webp', 'Logo No mag-tech blanc sur fond bleu clair à motif damier', 4500, 5626),
+      img('/images/projets/no-mag/No-Mag-Tech_4.webp', 'Page éditoriale Break News avec un portrait en effet de balayage numérique bleu', 4501, 5626),
+      img('/images/projets/no-mag/No-Mag-Tech_5.webp', 'Palette de couleurs et déclinaisons du logo No mag-tech en trois bleus', 4501, 5625),
+      img('/images/projets/no-mag/No-Mag-Tech_6.webp', 'Logo No mag-tech bleu sur fond turquoise à motif damier', 4501, 5626),
+      img('/images/projets/no-mag/No-Mag-Tech_7.webp', 'Planche typographique No mag-tech : Neue Haas Grotesk Display Pro', 4501, 5626),
+      img('/images/projets/no-mag/No-Mag-Tech_8.webp', 'Page éditoriale Break News avec un buste en lignes lumineuses bleues', 4501, 5625),
+      img('/images/projets/no-mag/No-Mag-Tech_9.webp', 'Site No mag-tech affiché sur un smartphone', 4501, 5626),
+      img('/images/projets/no-mag/No-Mag-Tech_10.webp', 'Façade de bâtiment et enseigne lumineuse aux couleurs No mag-tech', 4500, 5626),
+      img('/images/projets/no-mag/No-Mag-Tech_11.webp', 'Goodies No mag-tech : tote bag, cartes de visite, sac à dos et porte-clés', 4500, 5625),
+      img('/images/projets/no-mag/No-Mag-Tech_12.webp', "Stand d'exposition et bureaux aux couleurs No mag-tech", 4500, 5626),
+    ]),
+  },
   'morwen-automobile': {
     displayTitle: 'Morwen Automobile',
     discipline: 'Identité de marque',
@@ -335,7 +381,7 @@ const EXTRAS = {
   },
 };
 
-const ORDER = ['morwen-automobile', 'tic-tac', 'spicy-20s', 'cherry-cherie', 'the-morning-party', 'shooting-produit', 'football-cover'];
+const ORDER = ['morwen-automobile', 'no-mag', 'tic-tac', 'spicy-20s', 'cherry-cherie', 'the-morning-party', 'shooting-produit', 'football-cover'];
 
 export const PROJECTS = ORDER.map((slug) => {
   const base = BASE_PROJECTS.find((p) => p.slug === slug);

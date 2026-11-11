@@ -221,7 +221,7 @@ export default function Home() {
             <span className="eyebrow">Démarrer un projet</span>
             <h2 className="display reveal" style={{ margin: 0, fontSize: 'clamp(40px, 5.6vw, 80px)', lineHeight: 0.98, letterSpacing: '-0.025em' }}>Un projet en tête ?</h2>
             <p style={{ margin: 0, maxWidth: '420px', fontSize: '17px', lineHeight: 1.55, color: 'var(--text-2)' }}>
-              Décrivez-le en quelques lignes. Je vous réponds sous À REMPLIR (ex. « 48 h ») avec une première proposition d'approche.
+              Décrivez-le en quelques lignes. Je vous réponds sous 24 h avec une première proposition d'approche.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '16px', fontSize: '16px' }}>
               <a href="mailto:helloarisidstudio@gmail.com" className="text-link break-anywhere" style={{ alignSelf: 'flex-start', fontWeight: 400 }}>helloarisidstudio@gmail.com</a>
