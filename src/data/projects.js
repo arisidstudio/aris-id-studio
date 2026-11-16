@@ -4,7 +4,7 @@ const BASE_PROJECTS = [
     slug: 'le-twist',
     title: "Le Twist",
     category: "Branding",
-    image: "/images/projets/le-twist/lt-cover.webp",
+    image: "/images/projets/le-twist/lt-cover-logo.webp",
     year: "2026",
     role: "Brand Designer & DA",
     description: "Le Twist est la marque d'un bartender lyonnais qui apporte l'expérience d'un vrai bar à cocktails chez les gens, pour leurs soirées privées, mariages et afterworks, et qui forme aussi les futurs bartenders.\n\nLe défi était de sortir des codes attendus du secteur, le noir et doré, les shakers qui volent, les flammes, pour installer une image festive mais élégante, premium sans être snob. Tout part du nom : le twist, c'est la danse, le zeste qu'on torsade au-dessus du verre et le petit plus inattendu. Le « i » du logo devient ce zeste, et ce symbole se décline ensuite sur tous les supports, du tablier à la carte des cocktails.",
@@ -215,7 +215,7 @@ const EXTRAS = {
     services: ['branding'],
     sector: 'Événementiel',
     deliverables: 'Logo, couleurs, typographies, icônes, motif, réseaux sociaux, papeterie, objets de marque',
-    cover: img('/images/projets/le-twist/lt-cover.webp', 'Zeste d\'agrume pressé au-dessus d\'un cocktail corail, tablier merlot en arrière-plan', 720, 900),
+    cover: img('/images/projets/le-twist/lt-cover-logo.webp', 'Logo Le Twist, bar à domicile, crème et corail sur fond merlot', 1440, 1800),
     hero: img('/images/projets/le-twist/lt-hero.webp', 'Bartender en tablier merlot servant un cocktail corail lors d\'une soirée privée', 2400, 1600),
     tagline: 'Une identité qui donne envie de trinquer, sans les clichés du bar.',
     colors: [
@@ -228,9 +228,23 @@ const EXTRAS = {
       { label: 'Logo', layout: 'single', images: [
         img('/images/projets/le-twist/lt-logo.webp', 'Logotype Le Twist sur sa grille de construction, le i en forme de zeste', 1800, 1220),
       ] },
-      { label: 'Déclinaisons', layout: 'cols-2', images: [
-        img('/images/projets/le-twist/lt-declinaisons.webp', 'Logo principal, signature et symbole Le Twist', 1800, 1220),
-        img('/images/projets/le-twist/lt-logo-fonds.webp', 'Logo Le Twist sur fonds daylight, merlot et corail', 1800, 1220),
+      { label: 'Déclinaisons', layout: 'cols-3', images: [
+        img('/images/projets/le-twist/lt-decl-signature-merlot.webp', 'Logo Le Twist avec signature, crème et corail sur fond merlot', 1600, 1067, '3/2'),
+        img('/images/projets/le-twist/lt-decl-signature-daylight.webp', 'Logo Le Twist avec signature, merlot et corail sur fond daylight', 1600, 1067, '3/2'),
+        img('/images/projets/le-twist/lt-decl-signature-corail.webp', 'Logo Le Twist avec signature, merlot et crème sur fond corail', 1600, 1067, '3/2'),
+        img('/images/projets/le-twist/lt-decl-signature-navy.webp', 'Logo Le Twist avec signature, crème et corail sur fond navy', 1600, 1067, '3/2'),
+        img('/images/projets/le-twist/lt-decl-signature-noir.webp', 'Logo Le Twist avec signature, noir sur fond blanc', 1600, 1067, '3/2'),
+        img('/images/projets/le-twist/lt-decl-signature-blanc.webp', 'Logo Le Twist avec signature, blanc sur fond noir', 1600, 1067, '3/2'),
+        img('/images/projets/le-twist/lt-decl-sur-merlot.webp', 'Logo Le Twist crème et corail sur fond merlot', 1600, 1067, '3/2'),
+        img('/images/projets/le-twist/lt-decl-sur-daylight.webp', 'Logo Le Twist merlot et corail sur fond daylight', 1600, 1067, '3/2'),
+        img('/images/projets/le-twist/lt-decl-sur-corail.webp', 'Logo Le Twist merlot et crème sur fond corail', 1600, 1067, '3/2'),
+        img('/images/projets/le-twist/lt-decl-sur-navy.webp', 'Logo Le Twist crème et corail sur fond navy', 1600, 1067, '3/2'),
+        img('/images/projets/le-twist/lt-decl-noir.webp', 'Logo Le Twist noir sur fond blanc', 1600, 1067, '3/2'),
+        img('/images/projets/le-twist/lt-decl-blanc.webp', 'Logo Le Twist blanc sur fond noir', 1600, 1067, '3/2'),
+      ] },
+      { label: "Icône d'application", layout: 'cols-2', images: [
+        img('/images/projets/le-twist/lt-decl-icone.webp', "Icône d'application Le Twist, symbole corail sur fond merlot", 1024, 1024, '1/1'),
+        img('/images/projets/le-twist/lt-decl-icone-daylight.webp', "Icône d'application Le Twist, symbole corail sur fond daylight", 1024, 1024, '1/1'),
       ] },
       { label: 'Couleurs et typographies', layout: 'cols-2', images: [
         img('/images/projets/le-twist/lt-couleurs.webp', 'Palette Le Twist : merlot et corail', 1800, 1220),

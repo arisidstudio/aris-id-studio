@@ -104,15 +104,15 @@ export default function Home() {
         </div>
 
         <Link
-          to="/projets/morwen-automobile"
+          to="/projets/le-twist"
           className="h-in hero-card glass"
           style={{ '--d': '600ms', '--y': '12px', position: 'absolute', right: GUTTER, bottom: '72px', width: '320px', padding: '12px', display: 'flex', alignItems: 'center', gap: '16px', borderRadius: '6px', textDecoration: 'none', color: 'var(--text)' }}
         >
-          <img src="/images/proj-morwen.webp" alt="" width="72" height="72" loading="lazy" decoding="async" style={{ width: '72px', height: '72px', objectFit: 'cover', borderRadius: '3px', flexShrink: 0 }} />
+          <img src="/images/projets/le-twist/lt-cover-logo.webp" alt="" width="72" height="72" loading="lazy" decoding="async" style={{ width: '72px', height: '72px', objectFit: 'cover', borderRadius: '3px', flexShrink: 0 }} />
           <span style={{ display: 'flex', flexDirection: 'column', gap: '4px', flex: 1, minWidth: 0 }}>
             <span style={{ fontSize: '12px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-3)' }}>Dernier projet</span>
-            <span style={{ fontSize: '16px', fontWeight: 500 }}>Morwen Automobile</span>
-            <span style={{ fontSize: '13px', color: 'var(--text-3)' }}>Identité de marque</span>
+            <span style={{ fontSize: '16px', fontWeight: 500 }}>Le Twist</span>
+            <span style={{ fontSize: '13px', color: 'var(--text-3)' }}>Identité visuelle</span>
           </span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-soft)" strokeWidth="1.8" aria-hidden="true" style={{ flexShrink: 0 }}><path d="M7 17L17 7M9 7h8v8" /></svg>
         </Link>
@@ -130,16 +130,26 @@ export default function Home() {
 
         <div style={{ ...twoCols, gap: '32px', paddingTop: '48px' }}>
           <ProjectCard
-            slug="morwen-automobile"
-            name="Morwen Automobile"
-            discipline="Identité de marque"
-            image="/images/proj-morwen.webp"
-            alt="Identité Morwen Automobile déclinée sur coffret, carte et signalétique"
-            width={720}
-            height={900}
+            slug="le-twist"
+            name="Le Twist"
+            discipline="Identité visuelle"
+            image="/images/projets/le-twist/lt-cover-logo.webp"
+            alt="Logo Le Twist, bar à domicile, crème et corail sur fond merlot"
+            width={1440}
+            height={1800}
             ratio="4/5"
           />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', minWidth: 0 }}>
+            <ProjectCard
+              slug="morwen-automobile"
+              name="Morwen Automobile"
+              discipline="Identité de marque"
+              image="/images/proj-morwen.webp"
+              alt="Identité Morwen Automobile déclinée sur coffret, carte et signalétique"
+              width={720}
+              height={900}
+              ratio="16/10"
+            />
             <ProjectCard
               slug="tic-tac"
               name="Tic Tac"
@@ -148,16 +158,6 @@ export default function Home() {
               alt="Enseigne Tic Tac sur une façade"
               width={900}
               height={640}
-              ratio="16/10"
-            />
-            <ProjectCard
-              slug="spicy-20s"
-              name="Spicy 20's"
-              discipline="Branding · Direction artistique"
-              image="/images/proj-spicy.webp"
-              alt="Bouteille Spicy 20's rouge avec le logo flamme"
-              width={900}
-              height={675}
               ratio="16/10"
             />
           </div>

@@ -10,7 +10,12 @@ const label = { display: 'block', marginBottom: '24px', fontSize: '13px', letter
 const statement = { margin: 0, fontSize: 'clamp(32px, 3.6vw, 52px)', lineHeight: 1.05, letterSpacing: '-0.02em' };
 
 const GRID_MIN = { 'cols-2': 420, 'cols-3': 300, 'cols-4': 280 };
-const grid = (min) => ({ display: 'grid', gridTemplateColumns: `repeat(auto-fit, minmax(min(100%, ${min}px), 1fr))`, gap: '16px' });
+const GRID_MAX_COLS = { 'cols-2': 2, 'cols-3': 3, 'cols-4': 4 };
+// With maxCols, a column is never narrower than 1/maxCols of the row, so 'cols-3' stays at 3 columns even with 12 images.
+const grid = (min, maxCols) => {
+  const colMin = maxCols ? `max(${min}px, calc((100% - ${(maxCols - 1) * 16}px) / ${maxCols}))` : `${min}px`;
+  return { display: 'grid', gridTemplateColumns: `repeat(auto-fit, minmax(min(100%, ${colMin}), 1fr))`, gap: '16px' };
+};
 
 function textColorFor(hex) {
   const n = parseInt(hex.slice(1), 16);
@@ -52,7 +57,7 @@ function SectionImages({ section }) {
       </>
     );
   }
-  return <div style={grid(GRID_MIN[layout] ?? 420)}>{images.map((im) => <ProjectImage key={im.src} image={im} />)}</div>;
+  return <div style={grid(GRID_MIN[layout] ?? 420, GRID_MAX_COLS[layout])}>{images.map((im) => <ProjectImage key={im.src} image={im} />)}</div>;
 }
 
 function ProjectSection({ section, padClass }) {
