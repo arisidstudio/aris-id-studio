@@ -1,5 +1,16 @@
 const BASE_PROJECTS = [
   {
+    id: 9,
+    slug: 'le-twist',
+    title: "Le Twist",
+    category: "Branding",
+    image: "/images/projets/le-twist/lt-cover.webp",
+    year: "2026",
+    role: "Brand Designer & DA",
+    description: "Le Twist est la marque d'un bartender lyonnais qui apporte l'expérience d'un vrai bar à cocktails chez les gens, pour leurs soirées privées, mariages et afterworks, et qui forme aussi les futurs bartenders.\n\nLe défi était de sortir des codes attendus du secteur, le noir et doré, les shakers qui volent, les flammes, pour installer une image festive mais élégante, premium sans être snob. Tout part du nom : le twist, c'est la danse, le zeste qu'on torsade au-dessus du verre et le petit plus inattendu. Le « i » du logo devient ce zeste, et ce symbole se décline ensuite sur tous les supports, du tablier à la carte des cocktails.",
+    content: []
+  },
+  {
     id: 8,
     slug: 'no-mag',
     title: "No Mag",
@@ -198,6 +209,57 @@ const img = (src, alt, width, height, ratio) => ({ src, alt, width, height, rati
 const visuals = (items) => [{ label: 'Visuels', layout: 'masonry', images: items }];
 
 const EXTRAS = {
+  'le-twist': {
+    displayTitle: 'Le Twist',
+    discipline: 'Identité visuelle',
+    services: ['branding'],
+    sector: 'Événementiel',
+    deliverables: 'Logo, couleurs, typographies, icônes, motif, réseaux sociaux, papeterie, objets de marque',
+    cover: img('/images/projets/le-twist/lt-cover.webp', 'Zeste d\'agrume pressé au-dessus d\'un cocktail corail, tablier merlot en arrière-plan', 720, 900),
+    hero: img('/images/projets/le-twist/lt-hero.webp', 'Bartender en tablier merlot servant un cocktail corail lors d\'une soirée privée', 2400, 1600),
+    tagline: 'Une identité qui donne envie de trinquer, sans les clichés du bar.',
+    colors: [
+      { name: 'Merlot', hex: '#4E0109' },
+      { name: 'Corail', hex: '#F96855' },
+      { name: 'Daylight', hex: '#F2E5DD' },
+      { name: 'Corail profond', hex: '#B83A2A' },
+    ],
+    sections: [
+      { label: 'Logo', layout: 'single', images: [
+        img('/images/projets/le-twist/lt-logo.webp', 'Logotype Le Twist sur sa grille de construction, le i en forme de zeste', 1800, 1220),
+      ] },
+      { label: 'Déclinaisons', layout: 'cols-2', images: [
+        img('/images/projets/le-twist/lt-declinaisons.webp', 'Logo principal, signature et symbole Le Twist', 1800, 1220),
+        img('/images/projets/le-twist/lt-logo-fonds.webp', 'Logo Le Twist sur fonds daylight, merlot et corail', 1800, 1220),
+      ] },
+      { label: 'Couleurs et typographies', layout: 'cols-2', images: [
+        img('/images/projets/le-twist/lt-couleurs.webp', 'Palette Le Twist : merlot et corail', 1800, 1220),
+        img('/images/projets/le-twist/lt-typographies.webp', 'Duo typographique Fraunces et Montserrat', 1800, 1220),
+      ] },
+      { label: 'Icônes et motif', layout: 'cols-2', images: [
+        img('/images/projets/le-twist/lt-icones.webp', 'Jeu d\'icônes Le Twist', 1800, 1220),
+        img('/images/projets/le-twist/lt-motif.webp', 'Motif Le Zeste en merlot et corail', 1800, 1220),
+      ] },
+      { label: 'Réseaux sociaux', layout: 'cols-3', quote: '« Vous recevez, je m\'occupe du reste. »', images: [
+        img('/images/projets/le-twist/lt-avatar.webp', 'Avatar Le Twist décliné sur les réseaux', 1800, 1220),
+        img('/images/projets/le-twist/lt-publications.webp', 'Quatre modèles de publications Instagram Le Twist', 1800, 1220),
+        img('/images/projets/le-twist/lt-stories.webp', 'Stories Le Twist : annonces, questions et coulisses', 1800, 1220),
+      ] },
+      { label: 'Applications', layout: 'feature', images: [
+        img('/images/projets/le-twist/lt-site.webp', 'Page d\'accueil du site Le Twist sur ordinateur et mobile', 1800, 1220),
+        img('/images/projets/le-twist/lt-carte-visite.webp', 'Cartes de visite Le Twist recto verso', 1800, 1220),
+        img('/images/projets/le-twist/lt-carte-cocktails.webp', 'Carte des cocktails personnalisée pour un mariage', 1800, 1220),
+        img('/images/projets/le-twist/lt-devis.webp', 'Devis et courriers à en-tête Le Twist', 1800, 1220),
+      ] },
+      { label: 'Objets de marque', layout: 'single', images: [
+        img('/images/projets/le-twist/lt-objets.webp', 'Tablier merlot brodé, sous-verres, étiquettes de sirops et bar mobile Le Twist', 1800, 1220),
+      ] },
+      { label: 'Univers photo', layout: 'cols-2', images: [
+        img('/images/projets/le-twist/lt-univers.webp', 'Univers visuel Le Twist : soirées, cocktails et invités qui trinquent', 1800, 1220),
+        img('/images/projets/le-twist/lt-photo.webp', 'Direction photo : des soirées chaudes et vraies', 1800, 1220),
+      ] },
+    ],
+  },
   'no-mag': {
     displayTitle: 'No Mag',
     discipline: 'Identité de marque',
@@ -381,7 +443,7 @@ const EXTRAS = {
   },
 };
 
-const ORDER = ['morwen-automobile', 'no-mag', 'tic-tac', 'spicy-20s', 'cherry-cherie', 'the-morning-party', 'shooting-produit', 'football-cover'];
+const ORDER = ['le-twist', 'morwen-automobile', 'no-mag', 'tic-tac', 'spicy-20s', 'cherry-cherie', 'the-morning-party', 'shooting-produit', 'football-cover'];
 
 export const PROJECTS = ORDER.map((slug) => {
   const base = BASE_PROJECTS.find((p) => p.slug === slug);
